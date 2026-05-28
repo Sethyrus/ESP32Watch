@@ -14,5 +14,6 @@
     "--background-index",
     "--query-driver=**",
     "--compile-commands-dir=/Users/alex/Proyectos/Alex/ESP32/ESP32S3Watch/ESP32S3Watch/build"
-  ]
+  ],
+  "idf.flashType": "UART"
 }
