@@ -1,0 +1,2187 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06 -->
+<html class="client-js" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"57f78e4ce4ce51b3f68ff2ca","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"ESP32-S3-Touch-AMOLED-2.06","wgTitle":"ESP32-S3-Touch-AMOLED-2.06","wgCurRevisionId":109509,"wgRevisionId":109509,"wgArticleId":24556,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["UART interface","USB interface","GPIO interface"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ESP32-S3-Touch-AMOLED-2.06","wgRelevantArticleId":24556,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],
+"wgRestrictionMove":[]};RLSTATE={"ext.gadget.tabber":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.tweeki.styles":"ready","skins.tweeki.bootstraptheme.styles":"ready","skins.tweeki.externallinks.styles":"ready","skins.tweeki.awesome.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.FancyBoxThumbs","ext.HighlightjsIntegration","skins.tweeki.messages","skins.tweeki.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/aAdkk0o.php">
+<script async="" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/aAdkk0o(1).php"></script>
+<style>
+.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.mw-collapsible-toggle-default:before{content:'['}.mw-collapsible-toggle-default:after{content:']'}.mw-customtoggle,.mw-collapsible-toggle{cursor:pointer} caption .mw-collapsible-toggle,.mw-content-ltr caption .mw-collapsible-toggle,.mw-content-rtl caption .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr caption .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl caption .mw-collapsible-toggle{float:none}
+pre.code2highlight,pre.nohighlight{  padding:0.5em}code.code2highlight.hljs{  padding:1px 4px}.hljs{display:block;overflow-x:auto;padding:0.5em;background:#1E1E1E;color:#DCDCDC}.hljs-keyword,.hljs-literal,.hljs-symbol,.hljs-name{color:#569CD6}.hljs-link{color:#569CD6;text-decoration:underline}.hljs-built_in,.hljs-type{color:#4EC9B0}.hljs-number,.hljs-class{color:#B8D7A3}.hljs-string,.hljs-meta-string{color:#D69D85}.hljs-regexp,.hljs-template-tag{color:#9A5334}.hljs-subst,.hljs-function,.hljs-title,.hljs-params,.hljs-formula{color:#DCDCDC}.hljs-comment,.hljs-quote{color:#57A64A;font-style:italic}.hljs-doctag{color:#608B4E}.hljs-meta,.hljs-meta-keyword,.hljs-tag{color:#9B9B9B}.hljs-variable,.hljs-template-variable{color:#BD63C5}.hljs-attr,.hljs-attribute,.hljs-builtin-name{color:#9CDCFE}.hljs-section{color:gold}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.hljs-bullet,.hljs-selector-tag,.hljs-selector-id,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo{color:#D7BA7D}.hljs-addition{background-color:#144212;display:inline-block;width:100%}.hljs-deletion{background-color:#600;display:inline-block;width:100%}
+.fancybox-wrap,.fancybox-skin,.fancybox-outer,.fancybox-inner,.fancybox-image,.fancybox-wrap iframe,.fancybox-wrap object,.fancybox-nav,.fancybox-nav span,.fancybox-tmp{padding:0;margin:0;border:0;outline:none;vertical-align:top}.fancybox-wrap{position:absolute;top:0;left:0;z-index:8020}.fancybox-skin{position:relative;background:#f9f9f9;color:#444;text-shadow:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.fancybox-opened{z-index:8030}.fancybox-opened .fancybox-skin{-webkit-box-shadow:0 10px 25px rgba(0,0,0,0.5);-moz-box-shadow:0 10px 25px rgba(0,0,0,0.5);box-shadow:0 10px 25px rgba(0,0,0,0.5)}.fancybox-outer,.fancybox-inner{position:relative}.fancybox-inner{overflow:hidden}.fancybox-type-iframe .fancybox-inner{-webkit-overflow-scrolling:touch}.fancybox-error{color:#444;font:14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;padding:15px;white-space:nowrap}.fancybox-image,.fancybox-iframe{display:block;width:100%;height:100%}.fancybox-image{max-width:100%;max-height:100%}#fancybox-loading,.fancybox-close,.fancybox-prev span,.fancybox-next span{background-image:url(/w/extensions/FancyBoxThumbs/modules/fancyBox/source/fancybox_sprite.png?783d4)}#fancybox-loading{position:fixed;top:50%;left:50%;margin-top:-22px;margin-left:-22px;background-position:0 -108px;opacity:0.8;cursor:pointer;z-index:8060}#fancybox-loading div{width:44px;height:44px;background:url(/w/extensions/FancyBoxThumbs/modules/fancyBox/source/fancybox_loading.gif?c6f1a) center center no-repeat}.fancybox-close{position:absolute;top:-18px;right:-18px;width:36px;height:36px;cursor:pointer;z-index:8040}.fancybox-nav{position:absolute;top:0;width:40%;height:100%;cursor:pointer;text-decoration:none;background:transparent url(/w/extensions/FancyBoxThumbs/modules/fancyBox/source/blank.gif?32547); -webkit-tap-highlight-color:rgba(0,0,0,0);z-index:8040}.fancybox-prev{left:0}.fancybox-next{right:0}.fancybox-nav span{position:absolute;top:50%;width:36px;height:34px;margin-top:-18px;cursor:pointer;z-index:8040;visibility:hidden}.fancybox-prev span{left:10px;background-position:0 -36px}.fancybox-next span{right:10px;background-position:0 -72px}.fancybox-nav:hover span{visibility:visible}.fancybox-tmp{position:absolute;top:-99999px;left:-99999px;visibility:hidden;max-width:99999px;max-height:99999px;overflow:visible !important} .fancybox-lock{overflow:hidden}.fancybox-overlay{position:absolute;top:0;left:0;overflow:hidden;display:none;z-index:8010;background:url(/w/extensions/FancyBoxThumbs/modules/fancyBox/source/fancybox_overlay.png?77aea)}.fancybox-overlay-fixed{position:fixed;bottom:0;right:0}.fancybox-lock .fancybox-overlay{overflow:auto;overflow-y:scroll} .fancybox-title{visibility:hidden;font:normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;position:relative;text-shadow:none;z-index:8050}.fancybox-opened .fancybox-title{visibility:visible}.fancybox-title-float-wrap{position:absolute;bottom:0;right:50%;margin-bottom:-35px;z-index:8050;text-align:center}.fancybox-title-float-wrap .child{display:inline-block;margin-right:-100%;padding:2px 20px;background:transparent; background:rgba(0,0,0,0.8);-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-shadow:0 1px 2px #222;color:#FFF;font-weight:bold;line-height:24px;white-space:nowrap}.fancybox-title-outside-wrap{position:relative;margin-top:10px;color:#fff}.fancybox-title-inside-wrap{padding-top:10px}.fancybox-title-over-wrap{position:absolute;bottom:0;left:0;color:#fff;padding:10px;background:#000;background:rgba(0,0,0,.8)}
+@media screen {
+	.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;font-size:94%}}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/aAdkk0o(2).php">
+<link rel="stylesheet" href="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/aAdkk0o(3).php">
+<meta name="generator" content="MediaWiki 1.35.5">
+<meta property="og:image" content="https://www.waveshare.com/w/upload/2/2a/270px-ESP32-S3-Touch-AMOLED-2.06-demo-02.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="https://www.waveshare.com/w/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.waveshare.com/w/opensearch_desc.php" title="Waveshare Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://www.waveshare.com/w/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Waveshare Wiki Atom feed" href="https://www.waveshare.com/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-ESP32-S3-Touch-AMOLED-2_06 rootpage-ESP32-S3-Touch-AMOLED-2_06 skin-tweeki action-view tweeki-animateLayout tweeki-non-advanced tweeki-user-anon" style="margin-bottom: 0px; position: relative;">			<!-- navbar -->
+			<div id="mw-navigation" class="navbar navbar-default navbar-fixed-top navbar-expand-lg fixed-top navbar-light bg-light" role="navigation">
+				<h2>Navigation menu</h2>
+				<div id="mw-head" class="navbar-inner">
+					<div class="container">
+
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+							<a href="https://www.waveshare.com/wiki/Main_Page" class="navbar-brand"><img src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/Ws-watermark-en.svg" alt="Waveshare Wiki"></a>
+						</div>
+
+						<div id="navbar" class="navbar-collapse collapse">
+													<ul class="nav navbar-nav">
+							<li class="nav"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#" id="n-raspberry-pi" class="dropdown-toggle" data-toggle="dropdown">Raspberry Pi <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523rpi-boards"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Boards" tabindex="-1">Boards/Kits</a></li><li id="n-main_page.2523rpi-displays"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Displays" tabindex="-1">Displays</a></li><li id="n-main_page.2523rpi-cameras"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Cameras" tabindex="-1">Cameras</a></li><li id="n-main_page.2523rpi-expansions"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Expansions" tabindex="-1">Expansions</a></li><li id="n-main_page.2523rpi-laptops"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Laptops" tabindex="-1">All-in-one</a></li><li id="n-main_page.2523rpi-robots"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Robots" tabindex="-1">Robots</a></li><li id="n-main_page.2523rpi-games"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Games" tabindex="-1">Portable Gaming</a></li><li id="n-main_page.2523rpi-acces"><a href="https://www.waveshare.com/wiki/Main_Page#RPi-Acces" tabindex="-1">Accessories</a></li><li id="n-main_page.2523android-linux-boards"><a href="https://www.waveshare.com/wiki/Main_Page#Android-Linux-Boards" tabindex="-1">Other Android/Linux Boards</a></li></ul></li><li class="nav"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#" id="n-ai" class="dropdown-toggle" data-toggle="dropdown">AI <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523jetson-ai-boards"><a href="https://www.waveshare.com/wiki/Main_Page#Jetson-AI-Boards" tabindex="-1">Boards/Kits</a></li><li id="n-main_page.2523jetson-ai-displays"><a href="https://www.waveshare.com/wiki/Main_Page#Jetson-AI-Displays" tabindex="-1">Displays</a></li><li id="n-main_page.2523jetson-ai-cameras"><a href="https://www.waveshare.com/wiki/Main_Page#Jetson-AI-Cameras" tabindex="-1">Cameras</a></li><li id="n-main_page.2523jetson-ai-hat"><a href="https://www.waveshare.com/wiki/Main_Page#Jetson-AI-HAT" tabindex="-1">Expansions</a></li><li id="n-main_page.2523jetson-ai-robots"><a href="https://www.waveshare.com/wiki/Main_Page#Jetson-AI-Robots" tabindex="-1">Robots</a></li></ul></li><li class="nav"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#" id="n-displays" class="dropdown-toggle" data-toggle="dropdown">Displays <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523display-lcd-oleds"><a href="https://www.waveshare.com/wiki/Main_Page#Display-LCD-OLEDs" tabindex="-1">LCD/OLED</a></li><li id="n-main_page.2523display-e-paper"><a href="https://www.waveshare.com/wiki/Main_Page#Display-e-Paper" tabindex="-1">e-Paper</a></li></ul></li><li class="nav"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#" id="n-iot" class="dropdown-toggle" data-toggle="dropdown">IoT <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523long-range-wireless-comm"><a href="https://www.waveshare.com/wiki/Main_Page#Long-range-wireless-comm" tabindex="-1">Long Range Wireless</a></li><li id="n-main_page.2523short-range-wireless-comm"><a href="https://www.waveshare.com/wiki/Main_Page#Short-range-wireless-comm" tabindex="-1">Short Range Wireless</a></li><li id="n-main_page.2523wired-communication"><a href="https://www.waveshare.com/wiki/Main_Page#Wired-communication" tabindex="-1">Wired Comm / Converter</a></li><li id="n-main_page.2523misc-cameras-av"><a href="https://www.waveshare.com/wiki/Main_Page#Misc-cameras-av" tabindex="-1">Cameras / Audio / Video</a></li><li id="n-main_page.2523misc-sensor-modules"><a href="https://www.waveshare.com/wiki/Main_Page#Misc-sensor-modules" tabindex="-1">Sensors</a></li><li id="n-main_page.2523misc-servos-motors"><a href="https://www.waveshare.com/wiki/Main_Page#Misc-servos-motors" tabindex="-1">Motors / Servos</a></li><li id="n-main_page.2523misc-other-modules"><a href="https://www.waveshare.com/wiki/Main_Page#Misc-other-modules" tabindex="-1">others</a></li></ul></li><li class="nav"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#" id="n-robotics" class="dropdown-toggle" data-toggle="dropdown">Robotics <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523robotics-cars"><a href="https://www.waveshare.com/wiki/Main_Page#Robotics-cars" tabindex="-1">Mobile Robots</a></li><li id="n-main_page.2523dog-like-robots"><a href="https://www.waveshare.com/wiki/Main_Page#Dog-like-Robots" tabindex="-1">Dog-like Robots</a></li><li id="n-main_page.2523robotics-drivers-sensors"><a href="https://www.waveshare.com/wiki/Main_Page#Robotics-drivers-sensors" tabindex="-1">Drivers / Sensors</a></li><li id="n-main_page.2523robotics-robot-arms"><a href="https://www.waveshare.com/wiki/Main_Page#Robotics-robot-arms" tabindex="-1">Robot Arm / Control</a></li></ul></li><li class="nav"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#" id="n-mcu.252Ffpga" class="dropdown-toggle" data-toggle="dropdown">MCU/FPGA <b class="caret"></b></a><ul class="dropdown-menu " role="menu"><li id="n-main_page.2523arduino-main-boards"><a href="https://www.waveshare.com/wiki/Main_Page#Arduino-main-boards" tabindex="-1">Arduino</a></li><li id="n-main_page.2523micro.253Abit"><a href="https://www.waveshare.com/wiki/Main_Page#micro:bit" tabindex="-1">micro:bit</a></li><li id="n-main_page.2523mcu.2farm" class="LPC"><a href="https://www.waveshare.com/wiki/Main_Page#MCU.2FARM" tabindex="-1">STM32</a></li><li id="n-main_page.2523fpga"><a href="https://www.waveshare.com/wiki/Main_Page#FPGA" tabindex="-1">FPGA</a></li></ul></li><li class="nav"><a href="https://service.waveshare.com/" id="n-https.253A.252F.252Fservice.waveshare.com" rel="nofollow" target="_blank">Support</a></li>							</ul>
+						
+													<ul class="nav navbar-nav navbar-right">
+							</ul>
+				<form class="navbar-form navbar-right" action="https://www.waveshare.com/w/index.php" id="searchform">
+					<div class="form-group"><input type="search" name="search" placeholder="Product name search" title="Search Waveshare Wiki [ctrl-option-f]" accesskey="f" id="searchInput" class="search-query form-control"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="mw-searchButton" class="searchButton btn hidden">
+					</div>
+				</form><ul class="nav navbar-nav navbar-right">							</ul>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!-- /navbar -->
+					<div id="mw-page-base"></div>
+			<div id="mw-head-base"></div>
+			<a id="top"></a>
+
+			<!-- content -->
+			<div id="contentwrapper" class="user-loggedout not-editable container with-navbar with-navbar-fixed">
+
+				
+				<div class="row">
+					<div class="col-md-offset-2 col-md-10" role="main">
+								<div class="mw-body" id="content">
+			<div id="mw-js-message" style="display:none;"></div>
+									<h1 id="firstHeading" class="firstHeading page-header" lang="en"><span dir="auto">ESP32-S3-Touch-AMOLED-2.06</span></h1>
+									<!-- bodyContent -->
+			<div id="bodyContent">
+								<div id="siteSub">From Waveshare Wiki</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#mw-navigation">navigation</a>, 					<a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="wiki-pages jet-green-color">
+<div class="tabber">
+<table id="infotable" class="a-r at-c roundy bgd-green bl-white" style="margin-left: 5px; margin-bottom: 5px; width: 30%;">
+
+<tbody><tr>
+<td>
+<table class="at-c roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>ESP32-S3 Touch AMOLED 2.06</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><a href="https://www.waveshare.com/esp32-s3-touch-amoled-2.06.htm" title="ESP32-S3 Touch AMOLED 2.06" target="_blank" rel="nofollow noreferrer noopener"><img alt="ESP32-S3-Touch-AMOLED-2.06" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/180px-270px-ESP32-S3-Touch-AMOLED-2.06-demo-02.jpg" decoding="async" loading="lazy" width="180" height="135" srcset="/w/upload/2/2a/270px-ESP32-S3-Touch-AMOLED-2.06-demo-02.jpg 1.5x"></a><br><br><small>410×502, USB/UART/GPIO</small>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name2}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name3}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name4}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name5}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"><b>{{{name6}}}</b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="roundy" style="display:none;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" width="90%" class="at-c roundytop bgl-white">Primary Attribute
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-c roundytl roundytr bgwhite b-green" style="border-width: 0 0 1px 0;"><b>Category:</b>
+</td></tr>
+<tr style="display:none;">
+<th colspan="3" width="90px" class="at-r bgwhite b-green" style="border-width: 0 0 1px 0;">{{{userDefinedInfo}}}:
+</th>
+<td colspan="3" class="at-l b-green bgwhite" style="border-width: 0 0 1px 0;">{{{userdefinedvalue}}}
+</td></tr>
+<tr style="display:none;">
+<td colspan="6" width="90px" class="at-c roundybl roundybr bgwhite"><b>Brand:</b> Waveshare
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="a-r roundy" style="display:none;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" width="90%" class="at-c roundytop bgl-white">Website
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-c roundytl roundytr bgwhite b-green" style="border-width: 0 0 1px 0;"><b>International:</b> {{{website_en}}}
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-c roundybl roundybr bgwhite"><b>Chinese:</b> {{{website_cn}}}
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="a-r roundy" style="background: transparent; border-collapse:collapse;width:100%;display:none;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" width="90%" class="at-c roundytop bgl-white">Onboard Interfaces
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-l roundy bgwhite b-green" style="border-width: 0 0 1px 0;">
+<table class="roundy bgwhite fulltable" style="text-align:center;">
+
+<tbody><tr>
+<td class="roundy bl-gray bw-1" style="width:25%;;"><small><b><a href="https://www.waveshare.com/w/index.php?title=Category:GPIO_interface&amp;action=edit&amp;redlink=1" class="new" title="Category:GPIO interface (page does not exist)">GPIO</a></b></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;;"><small><b><a href="https://www.waveshare.com/wiki/Category:UART_interface" title="Category:UART interface">UART</a></b></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;;"><small><b><a href="https://www.waveshare.com/wiki/Category:USB_interface" title="Category:USB interface">USB</a></b></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"><small></small>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="display:none;">
+<td>
+<table class="a-r roundy" style="background: transparent; border-collapse:collapse;width:100%;;display:none;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" width="90%" class="at-c roundytop bgl-white">Related Products
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" width="90px" class="at-l roundy bgwhite b-green" style="border-width: 0 0 1px 0;">
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<div class="toccolours">
+
+
+<h1><span class="mw-headline" id="Introduction">Introduction</span></h1>
+<div class="mw-collapsible-content">
+<h2><span class="mw-headline" id="Introduction_2">Introduction</span></h2>
+<p>ESP32-S3-Touch-AMOLED-2.06 is a high-performance, wearable watch-shaped development board launched by Waveshare. The product is based on the ESP32-S3R8 microcontroller, integrating a 2.06inch capacitive touch HD AMOLED screen, a six-axis sensor, RTC, an audio codec chip and power management and other functional modules. With a custom case, it looks and forms like a smart watch and is designed for prototyping and functional verification of wearable applications.
+</p>
+<h2><span class="mw-headline" id="Features">Features</span></h2>
+<ul><li>Equipped with ESP32-S3R8 high-performance Xtensa 32-bit LX7 dual-core processor, up to 240MHz main frequency</li>
+<li>Supports 2.4GHz Wi-Fi (802.11 b/g/n) and Bluetooth 5 (BLE), with onboard antenna</li>
+<li>Built in 512KB SRAM and 384KB ROM, with onboard 8MB PSRAM and an external 32MB Flash</li>
+<li>Adopts Type-C interface to improve user convenience and device compatibility</li></ul>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="Hardware_Description">Hardware Description</span></h2>
+<ul><li>Onboard 2.06inch high-definition capacitive touch AMOLED screen with a resolution of 410×502, 16.7M colors for clear color pictures</li>
+<li>Embedded with CO5300 driver chip and FT3168 capacitive touch chip, communicating through QSPI and I2C interfaces respectively, minimizes required IO pins</li>
+<li>Onboard QMI8658 6-axis IMU (3-axis accelerometer and 3-axis gyroscope) for detecting motion gesture, step counting, etc.</li>
+<li>Onboard PCF85063 RTC chip connected to the battery via the AXP2101 for uninterrupted power supply</li>
+<li>Onboard PWR and BOOT two side buttons with customizable functions, allowing for custom function development</li>
+<li>Onboard 3.7V MX1.25 lithium battery recharge/discharge header</li>
+<li>Bring out 1 x I2C port, 1 x UART port, and 1 x USB pad, which can be used for external device connection and debugging</li>
+<li>Onboard TF card slot for extended storage and fast data transfer, flexible for data recording and media playback, simplifying circuit design</li>
+<li>The benefits of using AXP2101 include efficient power management, support for multiple output voltages, charging and battery management functions, and optimization for battery life</li>
+<li>The AMOLED screen has the advantages of higher contrast, wider viewing angle, richer colors, faster response, thinner design, lower power consumption, and flexibility</li></ul>
+<h2><span class="mw-headline" id="Pinout_Definition">Pinout Definition</span></h2>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-details-inter.jpg" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-details-inter.jpg" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/800px-ESP32-S3-Touch-AMOLED-2.06-details-inter.jpg" decoding="async" loading="lazy" width="800" height="983" srcset="/w/upload/3/38/ESP32-S3-Touch-AMOLED-2.06-details-inter.jpg 1.5x"></a>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-details-intro.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-details-intro.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/800px-ESP32-S3-Touch-AMOLED-2.06-details-intro.png" decoding="async" loading="lazy" width="800" height="577" srcset="/w/upload/a/a9/ESP32-S3-Touch-AMOLED-2.06-details-intro.png 1.5x"></a>
+</p>
+<h2><span class="mw-headline" id="Dimensions">Dimensions</span></h2>
+<p><a href="https://www.waveshare.com/wiki/File:900px-ESP32-S3-Touch-AMOLED-2.06-details-size.jpg" class="image fancybox"><img alt="900px-ESP32-S3-Touch-AMOLED-2.06-details-size.jpg" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/600px-900px-ESP32-S3-Touch-AMOLED-2.06-details-size.jpg" decoding="async" loading="lazy" width="600" height="475" srcset="/w/upload/b/b1/900px-ESP32-S3-Touch-AMOLED-2.06-details-size.jpg 1.5x"></a>
+</p>
+<h2><span class="mw-headline" id="Screen_Description">Screen Description</span></h2>
+<h3><span class="mw-headline" id="Touch_and_its_Controller">Touch and its Controller</span></h3>
+<ul><li>This touch screen is composed of surface toughened glass + thin film material, which has high strength, high hardness, and good light transmittance. It is equipped with FT3168 self-capacitance touch chip as the driver chip, which supports the I2C communication protocol standard and can realize a 10Khz~400Khz configurable communication rate.</li></ul>
+</div></div>
+<h1><span class="mw-headline" id="Battery_Installation_Guide">Battery Installation Guide</span></h1>
+<div role="note" class="note note-error">When disassembling, special attention should be paid to protecting the cable area. This part is vulnerable and prone to breakage due to pulling, twisting or forceful operation, which may affect the equipment's usage. Before disassembling, please be aware of the importance of cable protection. During the process, move slowly and gently. Observe the connection position and direction of the cables when separating the shell from the mainboard. Support the mainboard or cables to keep them in a natural and tension-free state to avoid forced disassembly.</div>
+<video src="https://files.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06/ESP32-S3-Touch-AMOLED-2.06-Assembly-Video-EN.mp4" controls="" style="width:860px;height:500px"></video><p style="font-size:80%;padding:0;margin:0;">(Right click to control movie)</p>
+<h1><span class="mw-headline" id="Usage_Instructions">Usage Instructions</span></h1>
+<p>ESP32-S3-Touch-AMOLED-2.06 currently provides two development tools and frameworks, <b>Arduino IDE</b> and <b>ESP-IDF</b>, providing flexible development options, you can choose the right development tool according to your project needs and personal habits.
+</p>
+<h2><span class="mw-headline" id="Development_Tool">Development Tool</span></h2>
+<table>
+
+<tbody><tr>
+<th style="width: 180px;">
+</th>
+<th>
+</th></tr>
+<tr>
+<td><a href="https://www.waveshare.com/wiki/File:270px-Arduino-IDE-logo.jpg" class="image fancybox"><img alt="270px-Arduino-IDE-logo.jpg" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/180px-270px-Arduino-IDE-logo.jpg" decoding="async" loading="lazy" width="180" height="163" srcset="/w/upload/a/a4/270px-Arduino-IDE-logo.jpg 1.5x"></a></td>
+<td>
+<h3><span class="mw-headline" id="Arduino_IDE">Arduino IDE</span></h3>
+<p>Arduino IDE is an open source electronic prototyping platform, convenient and flexible, easy to get started. After a simple learning, you can start to develop quickly. At the same time, Arduino has a large global user community, providing an abundance of open source code, project examples and tutorials, as well as rich library resources, encapsulating complex functions, allowing developers to quickly implement various functions.
+</p>
+</td></tr>
+
+<tr>
+<td><a href="https://www.waveshare.com/wiki/File:270px-ESP-IDF-logo.jpg" class="image fancybox"><img alt="270px-ESP-IDF-logo.jpg" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/180px-270px-ESP-IDF-logo.jpg" decoding="async" loading="lazy" width="180" height="163" srcset="/w/upload/a/a2/270px-ESP-IDF-logo.jpg 1.5x"></a></td>
+<td>
+<h3><span class="mw-headline" id="ESP-IDF">ESP-IDF</span></h3>
+<p>ESP-IDF, or full name Espressif IDE, is a professional development framework introduced by Espressif Technology for the ESP series chips. It is developed using the C language, including a compiler, debugger, and flashing tool, etc., and can be developed via the command lines or through an integrated development environment (such as Visual Studio Code with the Espressif IDF plugin). The plugin offers features such as code navigation, project management, and debugging, etc.
+</p>
+</td></tr></tbody></table>
+<p><br>
+Each of these two development approaches has its own advantages, and developers can choose according to their needs and skill levels. Arduino are suitable for beginners and non-professionals because they are easy to learn and quick to get started. ESP-IDF is a better choice for developers with a professional background or high performance requirements, as it provides more advanced development tools and greater control capabilities for the development of complex projects.
+</p><p><br>
+</p>
+<h2><span class="mw-headline" id="Components_Preparation">Components Preparation</span></h2>
+<ul><li>ESP32-S3-Touch-AMOLED-2.06 x1</li>
+<li>TF card x 1</li>
+<li>USB cable (Type-A male to Type-C male) x1</li></ul>
+<div role="note" class="note note-warn">If it is used with a lithium battery, the necessary protective measures must be taken. The plastic casing of the product is used only for basic isolation of the circuit board and battery, and is generally safe under normal usage conditions. However, in the actual use and storage process, users still need to pay attention to moisture, high temperature, drop and bump, and avoid overcharging or overdischarging. It is recommended to remove the battery for storage when not in use for a long time, and make sure that the lithium battery does not stay in a low state of power for a long time. If you choose to select the battery yourself, be sure to choose a lithium battery product that is safe and compliant, has protective functions, and can withstand high temperatures. Do not use a cheap and low-quality product. </div>
+<div style="color: red;">
+<h3><span class="mw-headline" id="Precautions_for_Using_Lithium_Batteries"><font color="red">Precautions for Using Lithium Batteries</font></span></h3>
+<ul><li>Lithium polymer and lithium-ion batteries are very unstable. They may cause fire, personal injury, or property damage, if they're not properly recharged or used.</li>
+<li>When charging and discharging the battery pack, never connect the electrodes incorrectly. Do not use inferior charger/charging panel to recharge the battery.</li>
+<li>Do not mix and use old batteries with new ones, and avoid using batteries from other brands.</li>
+<li>If you need to purchase additional lithium-ion battery products, ensure that the battery parameters are compatible with the lithium-ion battery expansion board. It is recommended to choose batteries from legitimate manufacturers and perform your own aging tests to ensure that the lithium-ion battery can operate stably and safely.</li>
+<li>Lithium batteries have a cycle life, please replace the old batteries with new ones when it reaches the end of its useful life or uses it for two years, whichever comes first.</li>
+<li>Please handle battery products properly, keep them away from flammable and explosive items, and keep them out of reach of children to avoid accidents due to improper storage.</li></ul>
+</div>
+<div role="note" class="note note-warn">Before operating, it is recommended to browse the table of contents to quickly understand the document structure. For smooth operation, please read the <a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#FAQ">FAQ</a> carefully to understand possible problems in advance. All resources in the document are provided with hyperlinks for easy download. </div>
+<div class="wiki-pages jet-green-color">
+<h1><span class="mw-headline" id="Working_with_Arduino">Working with Arduino</span></h1>
+<p>This chapter introduces setting up the Arduino environment, including the Arduino IDE, management of ESP32 boards, installation of related libraries, program compilation and downloading, as well as testing demos. It aims to help users master the development board and facilitate secondary development.
+<a href="https://www.waveshare.com/wiki/File:Arduino-flow-04.png" class="image fancybox"><img alt="Arduino-flow-04.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/800px-Arduino-flow-04.png" decoding="async" loading="lazy" width="800" height="44" srcset="/w/upload/thumb/1/17/Arduino-flow-04.png/1200px-Arduino-flow-04.png 1.5x, /w/upload/1/17/Arduino-flow-04.png 2x"></a>
+</p>
+<h2><span class="mw-headline" id="Environment_Setup">Environment Setup</span></h2>
+<h3><span class="mw-headline" id="Download_and_Install_Arduino_IDE">Download and Install Arduino IDE</span></h3>
+<ul><li>Click to visit the <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.arduino.cc/en/software">Arduino official website</a>, select the corresponding system and system bit to download <br><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-Ar-software-01.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-Ar-software-01.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-Ar-software-01.png" decoding="async" loading="lazy" width="902" height="458"></a></li>
+<li>Run the installer and install all by default</li></ul>
+<div role="note" class="note note-info">The environment setup is carried out on the Windows 10 system, Linux and Mac users can access <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html">Arduino-esp32 environment setup</a> for reference</div>
+<h3><span class="mw-headline" id="Install_ESP32_Development_Board">Install ESP32 Development Board</span></h3>
+<ul><li>Before using ESP32-related motherboards with the Arduino IDE, you must first install the software package for the <b>esp32 by Espressif Systems</b> development board</li>
+<li>According to <font color="red"><b> board installation requirement</b></font>, it is generally recommended to use <b>Install Online</b>. If online installation fails, use <b>Install Offline</b>.</li>
+<li>For the installation tutorial, please refer to <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/wiki/Arduino_Board_Managers_Tutorial">Arduino board manager tutorial</a></li></ul>
+<table class="wikitable table table-bordered" style="width:80%">
+<caption>
+<ul><li>ESP32-S3-Touch-AMOLED-2.06 required development board installation description</li></ul>
+</caption>
+<tbody><tr>
+<th>Board name</th>
+<th>Board installation requirement</th>
+<th>Version number requirement
+</th></tr>
+<tr style="text-align:center;">
+<td>esp32 by Espressif Systems</td>
+<td>"Install Offline" / "Install Online"</td>
+<td>≥3.2.0
+</td></tr>
+</tbody></table>
+<h3><span class="mw-headline" id="Install_Library">Install Library</span></h3>
+<ul><li>When installing Arduino libraries, there are usually two ways to choose from: <b>Install online</b> and <b>Install offline</b>.<b> <font color="red"> If the library installation requires offline installation, you must use the provided library file</font></b><br> For most libraries, users can easily search and install them through the online library manager of the Arduino software. However, some open-source libraries or custom libraries are not synchronized to the Arduino Library Manager, so they cannot be acquired through online searches. In this case, users can only manually install these libraries offline.</li>
+<li>ESP32-S3-Touch-AMOLED-2.06 library file is stored in the sample program, click here to jump: <a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Resources">ESP32-S3-Touch-AMOLED-2.06 Demo</a></li>
+<li>For library installation tutorial, please refer to <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/wiki/Arduino_Library_Manager_Tutorial">Arduino library manager tutorial</a></li></ul>
+<table class="wikitable list table table-striped table-bordered" style="width:100%;text-align:center;">
+<caption>ESP32-S3-Touch-AMOLED-2.06 Library file instructions
+</caption>
+<tbody><tr>
+<th>Library Name</th>
+<th>Description</th>
+<th>Version</th>
+<th>Library Installation Requirement
+</th></tr>
+<tr>
+<td>Arduino_DriveBus</td>
+<td>CST816 Touch chip driver library</td>
+<td>——</td>
+<td>"Install Offline"
+</td></tr>
+<tr>
+<td>GFX_Library_for_Arduino</td>
+<td>GFX graphical library for CO5300</td>
+<td>v1.6.0</td>
+<td>"Install Online" or "Install Offline"
+</td></tr>
+<tr>
+<td>lvgl</td>
+<td>LVGL graphical library</td>
+<td>v9.3.0</td>
+<td>"Install Online" requires copying the demos folder to src after installation. "Install Offline" is recommended
+</td></tr>
+<tr>
+<td>SensorLib</td>
+<td>PCF85063, QMI8658 sensor driver library</td>
+<td>v0.3.1</td>
+<td>"Install Online" or "Install Offline"
+</td></tr>
+<tr>
+<td>XPowersLib</td>
+<td>XP2101 power management chip driver library</td>
+<td>v0.2.6</td>
+<td>"Install Online" or "Install Offline"
+</td></tr>
+<tr>
+<td>Mylibrary</td>
+<td>Development board pin macro definition</td>
+<td>——</td>
+<td>"Install Offline"
+</td></tr>
+<tr>
+<td>lv_conf.h</td>
+<td>LVGL configuration file</td>
+<td>——</td>
+<td>"Install Offline"
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Arduino_Project_Parameter_Settings">Arduino Project Parameter Settings</span></h3>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06_01.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06 01.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-Touch-AMOLED-2.06_01.png" decoding="async" loading="lazy" width="600" height="1038"></a>
+</p>
+<div class="toccolours mw-collapsible mw-made-collapsible"><span class="mw-collapsible-toggle mw-collapsible-toggle-default" role="button" tabindex="0" aria-expanded="true"><a class="mw-collapsible-text">Collapse</a></span><div class="mw-collapsible-content">
+<h2><span class="mw-headline" id="Run_the_First_Arduino_Demo">Run the First Arduino Demo</span></h2>
+<div class="toccolours mw-collapsible mw-collapsed mw-made-collapsible"><span class="mw-collapsible-toggle mw-collapsible-toggle-default mw-collapsible-toggle-collapsed" role="button" tabindex="0" aria-expanded="false"><a class="mw-collapsible-text">Expand</a></span>
+<div role="note" class="note note-reminder">If you are just getting started with ESP32 and Arduino, and you don't know how to create, compile, flash, and run Arduino ESP32 programs, then please expand and take a look. Hope it can help you! </div>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: rgb(249, 249, 249); border-radius: 10px; display: none;">
+<div style="margin-bottom: 10px;">
+<h3><span class="mw-headline" id="New_Project">New Project</span></h3>
+<ul><li>Run the Arduino IDE and select <code><b>File</b></code> -&gt; <code><b>New Sketch</b></code> <br> <a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-Ar-study-01.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-Ar-study-01.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-Ar-study-01.png" decoding="async" loading="lazy" width="800" height="584"></a></li>
+<li>Enter the code:</li></ul>
+<pre class="code2highlight lang-c hljs cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">// put your setup code here, to run once:</span>
+  Serial.begin(<span class="hljs-number">115200</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">// put your main code here, to run repeatedly:</span>
+  Serial.println(<span class="hljs-string">"Hello, World!"</span>);
+  delay(<span class="hljs-number">2000</span>);
+}</pre>
+<ul><li>Save the project and select <code><b>File</b></code> -&gt; <code><b>Save As...</b></code>. In the pop-up menu, select the path to save the project, and enter a project name, such as <b>Hello_World</b>, click <code><b>Save</b></code></li></ul>
+<pre><br><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-Ar-study-02.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-Ar-study-02.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-Ar-study-02.png" decoding="async" loading="lazy" width="800" height="584"></a>
+</pre>
+</div>
+<div style="margin-bottom: 10px;">
+<h3><span class="mw-headline" id="Compile_and_Flash_Demos">Compile and Flash Demos</span></h3>
+<ul><li>Select the corresponding development board, take the ESP32S3 motherboard as an example:<br></li></ul>
+<p><font color="red">①. </font>Click to select the dropdown menu option <b>Select Other Board and Port</b>; <br>
+<font color="red">②. </font>Search for the required development board model <b>esp32s3 dev module</b> and select; <br>
+<font color="red">③. </font>Select <b>COM Port</b>; <br>
+<font color="red">④. </font><b>Save</b> the selection. <br>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-Ar-study-03.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-Ar-study-03.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-Ar-study-03.png" decoding="async" loading="lazy" width="800" height="584"></a>
+</p>
+<ul><li>If the ESP32S3 mainboard only has a USB port, you need to enable <b>USB CDC</b>, as shown in the following diagram: <br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-Ar-study-04.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-Ar-study-04.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-Ar-study-04.png" decoding="async" loading="lazy" width="798" height="580"></a>
+</p>
+<ul><li>Compile and upload the program: <br></li></ul>
+<p><font color="red">①. </font>Compile the program; <font color="red">②. </font>Compile and download the program; <font color="red">③. </font>Download successful. <br>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-Ar-study-05.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-Ar-study-05.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-Ar-study-05.png" decoding="async" loading="lazy" width="800" height="583"></a>
+</p>
+<ul><li>Open the <b>Serial Monitor</b> window, and the demo will print "Hello World!" every 2 seconds, and the operation is as follows:<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-Ar-study-06.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-Ar-study-06.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-Ar-study-06.png" decoding="async" loading="lazy" width="798" height="580"></a>
+</p>
+</div>
+</div>
+</div>
+</div></div>
+<h2><span class="mw-headline" id="Demo">Demo</span></h2>
+<p><a href="https://www.waveshare.com/wiki/File:Demo-flow-01.png" class="image fancybox"><img alt="Demo-flow-01.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/1000px-Demo-flow-01.png" decoding="async" loading="lazy" width="1000" height="54" srcset="/w/upload/7/74/Demo-flow-01.png 1.5x"></a>
+</p>
+<table class="wikitable table table-striped table-bordered" style="width:90%;background: white;">
+<caption>
+<ul><li>ESP32-S3-Touch-AMOLED-2.06 Demo</li></ul>
+</caption>
+<tbody><tr>
+<th>Demo</th>
+<th>Basic Description</th>
+<th>Dependency Library
+</th></tr>
+<tr>
+<td>01_HelloWorld</td>
+<td>Demonstrates the basic graphics library functions and can also be used to test the basic performance of display screens and the display effect of random text</td>
+<td>GFX_Library_for_Arduino
+</td></tr>
+<tr>
+<td>02_GFX_AsciiTable</td>
+<td>Prints ASCII characters in rows and columns on the display screen according to the screen size</td>
+<td>GFX_Library_for_Arduino
+</td></tr>
+<tr>
+<td>03_LVGL_PCF85063_simpleTime</td>
+<td>LVGL library displays the current time</td>
+<td>LVGL, SensorLib
+</td></tr>
+<tr>
+<td>04_LVGL_QMI8658_ui</td>
+<td>LVGL draws acceleration line chart</td>
+<td>LVGL, SensorLib
+</td></tr>
+<tr>
+<td>05_LVGL_AXP2101_ADC_Data</td>
+<td>LVGL displays PMIC data</td>
+<td>LVGL, XPowersLib
+</td></tr>
+<tr>
+<td>06_LVGL_Arduino_v9</td>
+<td>LVGL demonstration</td>
+<td>LVGL, Arduino_DriveBus
+</td></tr>
+<tr>
+<td>07_LVGL_SD_Test</td>
+<td>LVGL displays the contents of TF card files</td>
+<td>LVGL
+</td></tr>
+<tr>
+<td>08_ES8311</td>
+<td>ES8311 driver demo, playing simple audio</td>
+<td>——
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="01_HelloWorld">01_HelloWorld</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This demo demonstrates how to control the <b>CO5300</b> display using the Arduino GFX library, demonstrating basic graphics library functionality with dynamically changing text. This code can also be used to test the basic performance of the display and the effect of displaying random text</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Code analysis</b>
+</p>
+<hr>
+<ul><li>Initialize the display:</li></ul>
+<pre>if (!gfx-&gt;begin()) {
+  USBSerial.println("gfx-&gt;begin() failed!");
+}
+</pre>
+<ul><li>Clear the screen and display text:</li></ul>
+<pre>gfx-&gt;fillScreen(BLACK);
+gfx-&gt;setCursor(10, 10);
+gfx-&gt;setTextColor(RED);
+gfx-&gt;println("Hello World!");
+</pre>
+<ul><li>GIF display:</li></ul>
+<pre>gfx-&gt;setCursor(random(gfx-&gt;width()), random(gfx-&gt;height()));
+gfx-&gt;setTextColor(random(0xffff), random(0xffff));
+gfx-&gt;setTextSize(random(6), random(6), random(2));
+gfx-&gt;println("Hello World!");
+</pre>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<p><a href="https://www.waveshare.com/wiki/File:300px-ESP32-S3-Touch-AMOLED-2.06-250722-01.png" class="image fancybox"><img alt="300px-ESP32-S3-Touch-AMOLED-2.06-250722-01.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-300px-ESP32-S3-Touch-AMOLED-2.06-250722-01.png" decoding="async" loading="lazy" width="200" height="244" srcset="/w/upload/e/e6/300px-ESP32-S3-Touch-AMOLED-2.06-250722-01.png 1.5x"></a>
+</p>
+</div></div>
+<h3><span class="mw-headline" id="02_GFX_AsciiTable">02_GFX_AsciiTable</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This demo shows how to display a basic ASCII character table on the SH8601 display by using the Arduino GFX library on an ESP32. The core function of the code is to initialize the display and print ASCII characters by rows and columns on the display according to the screen size</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Code analysis</b>
+</p>
+<hr>
+<ul><li>Create data bus and graphic display objects<br>
+<ul><li>Here a data bus object for communicating with the display is created, which is initialized with a specific pin configuration. Then a graphical display object gfx is created, passing in parameters such as data bus, reset pin, rotation angle, whether it is an IPS screen, and the width and height of the display</li></ul></li></ul>
+<pre>Arduino_DataBus *bus = new Arduino_ESP32QSPI(
+  LCD_CS /* CS */, LCD_SCLK /* SCK */, LCD_SDIO0 /* SDIO0 */, LCD_SDIO1 /* SDIO1 */,
+  LCD_SDIO2 /* SDIO2 */, LCD_SDIO3 /* SDIO3 */);
+
+Arduino_GFX *gfx = new Arduino_CO5300(bus, -1 /* RST */,
+                                      0 /* rotation */, false /* IPS */, LCD_WIDTH, LCD_HEIGHT);
+</pre>
+<ul><li>Draw row and column numbers and character table<br>
+<ul><li>First set the text color to green and print the line numbers one by one on the display. Then set the text color to blue and print the column number. Next, use a loop to draw each character individually to form the character table, with each character using white foreground and black background</li></ul></li></ul>
+<pre>gfx-&gt;setTextColor(GREEN);
+for (int x = 0; x &lt; numRows; x++) {
+  gfx-&gt;setCursor(10 + x * 8, 2);
+  gfx-&gt;print(x, 16);
+}
+gfx-&gt;setTextColor(BLUE);
+for (int y = 0; y &lt; numCols; y++) {
+  gfx-&gt;setCursor(2, 12 + y * 10);
+  gfx-&gt;print(y, 16);
+}
+
+char c = 0;
+for (int y = 0; y &lt; numRows; y++) {
+  for (int x = 0; x &lt; numCols; x++) {
+    gfx-&gt;drawChar(10 + x * 8, 12 + y * 10, c++, WHITE, BLACK);
+  }
+}
+</pre>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<p><a href="https://www.waveshare.com/wiki/File:300px-ESP32-S3-Touch-AMOLED-2.06-250722-02.png" class="image fancybox"><img alt="300px-ESP32-S3-Touch-AMOLED-2.06-250722-02.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-300px-ESP32-S3-Touch-AMOLED-2.06-250722-02.png" decoding="async" loading="lazy" width="200" height="237" srcset="/w/upload/2/28/300px-ESP32-S3-Touch-AMOLED-2.06-250722-02.png 1.5x"></a>
+</p>
+</div></div>
+<h3><span class="mw-headline" id="03_GFX_PCF85063_simpleTime">03_GFX_PCF85063_simpleTime</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This demo demonstrates how to use the PCF85063 RTC module to display the current time on a CO5300 display, retrieving the time every second and updating the display only when the time changes</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Code analysis</b>
+</p>
+<hr>
+<ul><li><b>setup</b>: Initialize the program
+<ul><li>Serial port initialization to provide a channel for outputting error messages</li>
+<li>Initialize the real-time clock chip, including connection check and setting the initial time, to ensure the accuracy of the time</li>
+<li>Initialize the graphic display device, set the background color and brightness, and provide a visual interface for the time display</li></ul></li></ul>
+<ul><li><b>loop</b>: Continuously check for time changes and update the time display on the display while the program is running
+<ul><li>Regularly check whether the time has changed, and determine whether the time display needs to be updated by comparing the difference between the current time and the last update time</li>
+<li>Obtain the time information of the real-time clock and format it so that it is displayed correctly on the display</li>
+<li>If the time changes, clear the last time display area, set the text color and size, calculate the center position, and display the new time on the display. Finally save the current time as the last time for comparison next time</li></ul></li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<p><a href="https://www.waveshare.com/wiki/File:300px-ESP32-S3-Touch-AMOLED-2.06-250722-03.png" class="image fancybox"><img alt="300px-ESP32-S3-Touch-AMOLED-2.06-250722-03.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-300px-ESP32-S3-Touch-AMOLED-2.06-250722-03.png" decoding="async" loading="lazy" width="200" height="251" srcset="/w/upload/2/22/300px-ESP32-S3-Touch-AMOLED-2.06-250722-03.png 1.5x"></a>
+</p>
+</div></div>
+<h3><span class="mw-headline" id="04_LVGL_QMI8658_ui">04_LVGL_QMI8658_ui</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This demo demonstrates the use of LVGL for graphical display, communicating with the QMI8658 IMU to obtain accelerometer and gyroscope data</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Code analysis</b>
+</p>
+<hr>
+<ul><li><b>setup</b>: Responsible for initializing various hardware devices and LVGL graphics library environment
+<ul><li>Serial port initialization: <code><b>USBSerial.begin(115200)</b></code> prepares for serial port debugging</li>
+<li>Touch controller initialization: Keep trying to initialize the touch controller <code><b>FT3168</b></code>, if initialization fails, print an error message and wait with a delay, and print a success message if successful</li>
+<li>Graphical display initialization: Initialize the graphical display device <code><b>gfx</b></code>, set the brightness, and print the version information of LVGL and Arduino. Next, initialize the LVGL, including registering the print callback function for debugging, initializing the display driver and the input device driver. Create and start the LVGL timer, finally create a label and set the initial text to "Initializing..."</li>
+<li>Create a chart: Create a chart object <code><b>chart</b></code>, set the chart type, range, number of data points and other properties of the chart, and add data series for the three axes of acceleration</li>
+<li>Acceleration sensor initialization: Initialize acceleration sensor <code><b>qmi</b></code>, configure accelerometer and gyroscope parameters, enable them, and print chip ID and control register information</li></ul></li></ul>
+<ul><li><b>loop</b>
+<ul><li><code><b>lv_timer_handler()</b></code>: This is an important function in the LVGL graphics library, which is used to handle various timer events, animation updates, input processing and other tasks of the graphical interface. Calling this function in each loop ensures smooth operation of the graphical interface and timely response to interactions</li>
+<li>Read acceleration sensor data: If the acceleration sensor data is ready, read the acceleration data and print it via the serial port, while updating the chart to display the acceleration data. If the gyroscope data is ready, read the gyroscope data and print it via the serial port. Finally add a small delay and increase the frequency of data polling</li></ul></li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-04.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-04.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-04.png" decoding="async" loading="lazy" width="200" height="250" srcset="/w/upload/f/f7/ESP32-S3-Touch-AMOLED-2.06-250722-04.png 1.5x"></a>
+</p>
+</div></div>
+<h3><span class="mw-headline" id="05_LVGL_AXP2101_ADC_Data">05_LVGL_AXP2101_ADC_Data</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This demo demonstrates power management using the XPowers library under LVGL, and provides PWR custom button control for screen on and off actions</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Code analysis</b>
+</p>
+<hr>
+<ul><li>Screen on/off implementation function</li></ul>
+<pre>void toggleBacklight() {
+  USBSerial.println(backlight_on);
+  if (backlight_on) {
+    for (int i = 255; i &gt;= 0; i--) {
+      gfx-&gt;Display_Brightness(i);
+      delay(3);
+    }
+  }else{
+    for(int i = 0;i &lt;= 255;i++){
+      gfx-&gt;Display_Brightness(i);
+      delay(3);
+    }
+  }
+  backlight_on = !backlight_on;
+}
+</pre>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<ul><li>Display parameters: chip temperature, charging state, discharging state, standby state, Vbus connected, Vbus condition, charger status, battery voltage, Vbus voltage, system voltage, battery percentage</li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-05.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-05.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-05.png" decoding="async" loading="lazy" width="200" height="246" srcset="/w/upload/d/de/ESP32-S3-Touch-AMOLED-2.06-250722-05.png 1.5x"></a>
+</p>
+</div></div>
+<h3><span class="mw-headline" id="06_LVGL_Arduino_v9">06_LVGL_Arduino_v9</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li><ul><li>This demo demonstrates the LVGL Widgets example, the frame rate can reach 20~30 frames in the dynamic state. <b>By optimizing the SH8601 display library to achieve a better and smoother frame rate, which can actually be compared to the scenario with dual buffering and dual acceleration enabled in ESP-IDF environment</b></li></ul></li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Code analysis</b>
+</p>
+<hr>
+<ul><li><b>setup</b>: Responsible for initializing various hardware devices and LVGL graphics library environment
+<ul><li>Serial port initialization: <code><b>USBSerial.begin(115200)</b></code> prepares for serial port debugging</li>
+<li>I2C bus Initialization: <code><b>Wire.begin(IIC_SDA, IIC_SCL);</b></code> initializes I2C bus for communication with other I2C devices</li>
+<li>Expansion chip initialization: Create and initialize the expansion chip <code><b>expander</b></code>, set the pin mode as the output, and make some initial pin state settings</li>
+<li>Touch controller initialization: Keep trying to initialize the touch controller <code><b>FT3168</b></code>, if initialization fails, print an error message and wait with a delay, and print a success message if successful</li>
+<li>Graphical display initialization: Initialize the graphical display device <code><b>gfx</b></code>, set the brightness, and get the width and height of the screen. Then initialize the LVGL, including registering the print callback function for debugging, setting the touch controller's power mode to monitor mode, initializing the display driver and the input device driver. Create and start the LVGL timer, create a label and set the text, and finally call <code><b>lv_demo_widgets()</b></code> to display the LVGL sample widget</li></ul></li></ul>
+<ul><li><b>loop</b>
+<ul><li><code><b>lv_timer_handler()</b></code>: This is an important function in the LVGL graphics library, which is used to handle various timer events, animation updates, input processing and other tasks of the graphical interface. Calling this function in each loop ensures smooth operation of the graphical interface and timely response to interactions</li>
+<li><code><b>delay(5);</b></code>: Add a small delay to avoid overoccupying CPU resources</li></ul></li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-06.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-06.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-06.png" decoding="async" loading="lazy" width="200" height="245" srcset="/w/upload/d/db/ESP32-S3-Touch-AMOLED-2.06-250722-06.png 1.5x"></a>
+</p>
+</div></div>
+<h3><span class="mw-headline" id="07_LVGL_SD_Test">07_LVGL_SD_Test</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This demo demonstrates using SDMMC to drive a TF card and output its contents to the display</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li>
+<li>Insert the TF card into the board</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Code analysis</b>
+</p>
+<hr>
+<ul><li><b>setup</b>: Responsible for initializing various hardware devices and LVGL graphics library environment
+<ul><li>Serial port initialization: <code><b>USBSerial.begin(115200)</b></code> prepares for serial port debugging</li>
+<li>I2C bus and expansion chip initialization: Initialize the I2C bus, create and initialize the expansion chip, set its pin mode to output, and print the initial and new states</li>
+<li>Graphics display initialization: Initialize graphics display device, set brightness, initialize LVGL, set display driver and input device driver, create and start LVGL timer</li>
+<li>TF card Initialization and information display: Set the pins of the TF card and attempt to mount the TF card. If the mount fails, an error message is displayed on the serial port and the screen. If the mount is successful, detect the TF card type and display it, get the TF card size and display it. Then call the <code><b>listDir</b></code> function to list the contents of the TF card root directory, and display the TF card type, size, and directory list information in the label on the screen</li></ul></li></ul>
+<ul><li><b>listDir</b>: Recursively lists the files and subdirectories in the specified directory
+<ul><li>First print the name of the directory being listed. Then open the specified directory, and if the opening fails, an error message will be returned. If it is not a directory that is opened, an error message is also returned. If it is a directory, then traverse the files and subdirectories in it. For subdirectories, recursively call the <code><b>listDir</b></code> function to list their contents. For files, print the file name and file size. Finally, return all collected information as a string</li></ul></li></ul>
+</div>
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<div style="float:right; width:300px;">
+<table class="wikitable" style="text-align:center; width:100%;">
+<caption style="font-weight:bold; text-align:center;">TF card control pin description
+</caption>
+<tbody><tr>
+<th>SPI interface</th>
+<th>ESP32-S3
+</th></tr>
+<tr>
+<td>CS (SS)</td>
+<td>GPIO17
+</td></tr>
+<tr>
+<td>DI (MOSI)</td>
+<td>GPIO1
+</td></tr>
+<tr>
+<td>DO (MISO)</td>
+<td>GPIO3
+</td></tr>
+<tr>
+<td>SCK (SCLK)</td>
+<td>GPIO2
+</td></tr></tbody></table>
+</div>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-07.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-07.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-07.png" decoding="async" loading="lazy" width="200" height="245" srcset="/w/upload/2/2c/ESP32-S3-Touch-AMOLED-2.06-250722-07.png 1.5x"></a>
+</p>
+</div></div>
+<h3><span class="mw-headline" id="08_ES8311">08_ES8311</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This demo demonstrates using I2S to drive the ES8311 chip to play the converted binary audio file</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Code analysis</b>
+</p>
+<hr>
+<ul><li><b>es8311_codec_init</b>: Initializes the ES8311 audio codec
+<ul><li>Create a handle <code><b>es_handle</b></code> for the ES8311 codec</li>
+<li>Configure the clock parameters of ES8311, including the main clock and sampling clock frequency, as well as the clock polarity, etc.</li>
+<li>Initialize the codec and set the audio resolution to 16 bits</li>
+<li>Configure sampling frequency</li>
+<li>Configure microphone-related parameters, such as turning off the microphone, setting volume, and microphone gain</li></ul></li></ul>
+<ul><li><b>setup</b>: Perform overall initialization settings, including serial port, pins, I2S, and ES8311 codec
+<ul><li>Initialize serial port for debugging output</li>
+<li>Set a specific pin as output and set it high</li>
+<li>Configure I2S bus, set pins, operating mode, sampling rate, data bit width, channel mode, etc.</li>
+<li>Initialize the I2C bus</li>
+<li>Call the <code><b>es8311_codec_init</b></code> function to initialize the ES8311 codec</li>
+<li>Play a predefined piece of audio data (<code><b>canon_pcm</b></code>) through the I2S bus</li></ul></li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<ul><li>The device will play auido directly without showing content on the screen.</li></ul>
+</div>
+</div>
+<h1><span class="mw-headline" id="Working_with_ESP-IDF">Working with ESP-IDF</span></h1>
+<p>This chapter introduces setting up the ESP-IDF environment setup, including the installation of Visual Studio and the Espressif IDF plugin, program compilation, downloading, and testing of demos, to assist users in mastering the development board and facilitating secondary development.
+<a href="https://www.waveshare.com/wiki/File:ESP-IDF-flow-01.png" class="image fancybox"><img alt="ESP-IDF-flow-01.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/800px-ESP-IDF-flow-01.png" decoding="async" loading="lazy" width="800" height="60" srcset="/w/upload/d/d7/ESP-IDF-flow-01.png 1.5x"></a>
+</p>
+<h2><span class="mw-headline" id="Environment_Setup_2">Environment Setup</span></h2>
+<h3><span class="mw-headline" id="Download_and_Install_Visual_Studio">Download and Install Visual Studio</span></h3>
+<ul><li>Open the download page of <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://code.visualstudio.com/download">VScode official website</a>, choose the corresponding system and system bit to download<br><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-VScode-01.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-VScode-01.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-VScode-01.png" decoding="async" loading="lazy" width="803" height="513"></a></li>
+<li>After running the installation package, the rest can be installed by default, but here for the subsequent experience, it is recommended to check boxes 1, 2, and 3<br> <a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-VScode-02.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-VScode-02.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-VScode-02.png" decoding="async" loading="lazy" width="598" height="464"></a>
+<ul><li>After the first two items are enabled, you can open VSCode directly by right-clicking files or directories, which can improve the subsequent user experience.</li>
+<li>After the third item is enabled, you can select VSCode directly when you choose how to open it</li></ul></li></ul>
+<div role="note" class="note note-info">The environment setup is carried out on the Windows 10 system, Linux and Mac users can access <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://docs.espressif.com/projects/esp-idf/en/v5.1.4/esp32s3/get-started/windows-setup.html">ESP-IDF environment setup</a> for reference</div>
+<h3><span class="mw-headline" id="Install_Espressif_IDF_Plugin">Install Espressif IDF Plugin</span></h3>
+<ul><li>It is generally recommended to use <b>Install Online</b>. If online installation fails due to network factor, use <b>Install Offline</b>.</li>
+<li>For more information about how to install the Espressif IDF plugin, see <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/wiki/Install_Espressif_IDF_Plugin_Tutorial">Install Espressif IDF Plugin</a></li></ul>
+<h2><span class="mw-headline" id="Run_the_First_ESP-IDF_Demo">Run the First ESP-IDF Demo</span></h2>
+<div class="toccolours mw-collapsible mw-collapsed mw-made-collapsible"><span class="mw-collapsible-toggle mw-collapsible-toggle-default mw-collapsible-toggle-collapsed" role="button" tabindex="0" aria-expanded="false"><a class="mw-collapsible-text">Expand</a></span>
+<div role="note" class="note note-reminder">If you are just getting started with ESP32 and ESP-IDF, and you don't know how to create, compile, flash, and run ESP-IDF ESP32 programs, then please expand and take a look. Hope it can help you! </div>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: rgb(249, 249, 249); border-radius: 10px; display: none;">
+<div style="margin-bottom: 10px;">
+<h3><span class="mw-headline" id="New_Project_2">New Project</span></h3>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-01.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-01.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-01.png" decoding="async" loading="lazy" width="998" height="720"></a><br><br>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-02.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-02.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-02.png" decoding="async" loading="lazy" width="999" height="721"></a>
+</p>
+<h3><span class="mw-headline" id="Create_Demo">Create Demo</span></h3>
+<ul><li>Using the shortcut F1, enter esp-idf:show examples projects<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-03.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-03.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-03.png" decoding="async" loading="lazy" width="999" height="697"></a>
+</p>
+<ul><li>Select your current IDF version<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-04.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-04.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-04.png" decoding="async" loading="lazy" width="999" height="698"></a>
+</p>
+<ul><li>Take the Hello world demo as an example</li></ul>
+<p>①Select the corresponding demo<br>
+②Its readme will state what chip the demo applies to (how to use the demo and the file structure are described below, omitted here)<br>
+③Click to create the demo<br>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-05.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-05.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-05.png" decoding="async" loading="lazy" width="1000" height="707"></a>
+</p>
+<ul><li>Select the path to save the demo, and require that the demos cannot use folders with the same name<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-06.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-06.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-06.png" decoding="async" loading="lazy" width="999" height="698"></a>
+</p>
+<h3><span class="mw-headline" id="Modify_COM_Port">Modify COM Port</span></h3>
+<ul><li>The corresponding COM ports are shown here, click to modify them<br></li>
+<li>Please select the COM ports according to your device (You can view it from the device manager)<br></li>
+<li>In case of a download failure, please press the Reset button for more than 1 second or enter download mode, and wait for the PC to recognize the device again before downloading once more<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-07.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-07.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-07.png" decoding="async" loading="lazy" width="999" height="698"></a>
+</p>
+<h3><span class="mw-headline" id="Modify_Driver_Object">Modify Driver Object</span></h3>
+<ul><li>Select the object we need to drive, which is our main chip ESP32S3<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-08.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-08.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-08.png" decoding="async" loading="lazy" width="999" height="698"></a>
+</p>
+<ul><li>Choose the openocd path, it doesn't affect us here, so let's just choose one<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-09.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-09.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-09.png" decoding="async" loading="lazy" width="999" height="698"></a>
+</p>
+<h3><span class="mw-headline" id="Other_Status_Bar_Functions">Other Status Bar Functions</span></h3>
+<p>①.ESP-IDF Development Environment Version Manager, when our project requires differentiation of development environment versions, it can be managed by installing different versions of ESP-IDF. When the project uses a specific version, it can be switched to by utilizing it<br>
+②.Device flashing COM port, select to flash the compiled program into the chip<br>
+③.Select set-target chip model, select the corresponding chip model, for example, ESP32-P4-NANO needs to choose esp32p4 as the target chip<br>
+④.menuconfig, click it to modify sdkconfig configuration file, please refer to <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-reference/kconfig.html">project configuration details</a><br>
+⑤.fullclean button, when the project compilation error or other operations pollute the compiled content, you can clean up all the compiled content by clicking it<br>
+⑥.Build project, when a project satisfies the build, click this button to compile<br>
+⑦.Current download mode, the default is UART<br>
+⑧.flash button, when a project build is completed, select the COM port of the corresponding development board, and click this button to flash the compiled firmware to the chip<br>
+⑨.monitor enable flashing port monitoring, when a project passes through Build --&gt; Flash, click this button to view the log of output from flashing port and debugging port, so as to observe whether the application works normally<br>
+⑩.Debug<br>
+⑪.Build Flash Monitor one-click button, which is used to continuously execute Build --&gt; Flash --&gt; Monitor, often referred to as "little flame"<br><br>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-10.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-10.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-10.png" decoding="async" loading="lazy" width="999" height="698"></a>
+</p>
+<h3><span id="Compile,_Flash_and_Serial_Port_Monitor"></span><span class="mw-headline" id="Compile.2C_Flash_and_Serial_Port_Monitor">Compile, Flash and Serial Port Monitor</span></h3>
+<ul><li>Click on the all-in-one button we described before to compile, flash and open the serial port monitor<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-11.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-11.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-11.png" decoding="async" loading="lazy" width="999" height="698"></a>
+</p>
+<ul><li>It may take a long time to compile especially for the first time<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-12.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-12.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-12.png" decoding="async" loading="lazy" width="999" height="698"></a>
+</p>
+<ul><li>During this process, the ESP-IDF may take up a lot of CPU resources, so it may cause the system to lag<b><br></b></li>
+<li>If it is the first time to flash the program for a new project, you will need to select the download method, and select UART<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-13.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-13.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-13.png" decoding="async" loading="lazy" width="999" height="698"></a>
+</p>
+<ul><li>This can also be changed later in the Download methods section (click on it to pop up the options)<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-14.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-14.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-14.png" decoding="async" loading="lazy" width="999" height="697"></a>
+</p>
+<ul><li>As it comes with the onboard automatic download circuit, it can be downloaded automatically without manual operation</li>
+<li>After successful download, it will automatically enter the serial monitor, you can see the chip output the corresponding information and be prompted to restart after 10S<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-15.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-15.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-15.png" decoding="async" loading="lazy" width="998" height="697"></a>
+</p>
+<h3><span class="mw-headline" id="Use_the_IDF_Demos">Use the IDF Demos</span></h3>
+<div role="note" class="note note-reminder">The following takes <b>ESP32-S3-LCD-1.47-Demo</b> as an example to introduce the two opening methods of the project and the general steps of use, and the detailed explanation of the ESP-IDF project. If you use other projects, the operation steps can be applied similarly. </div>
+<h4><span class="mw-headline" id="Open_In_the_Software">Open In the Software</span></h4>
+<ul><li>Open VScode software and select the folder to open the demo<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-16.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-16.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-16.png" decoding="async" loading="lazy" width="999" height="698"></a>
+</p>
+<ul><li>Select the provided ESP-IDF example and click to select the file (located in the /Demo/ESP-IDF path under demo)<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-17.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-17.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-17.png" decoding="async" loading="lazy" width="999" height="698"></a>
+</p>
+<h4><span class="mw-headline" id="Open_from_Outside_the_Software">Open from Outside the Software</span></h4>
+<ul><li>Select the project directory correctly and open the project, otherwise it will affect the compilation and flashing of subsequent programs<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-18.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-18.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-18.png" decoding="async" loading="lazy" width="1000" height="280"></a>
+</p>
+<ul><li>After connecting the device, select the COM port and model, click below to compile and flash to achieve program control<br></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-AMOLED-1.91-study-19.png" class="image fancybox"><img alt="ESP32-S3-AMOLED-1.91-study-19.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-AMOLED-1.91-study-19.png" decoding="async" loading="lazy" width="999" height="698"></a>
+</p>
+<h4><span class="mw-headline" id="ESP-IDF_Project_Details">ESP-IDF Project Details</span></h4>
+<ul><li>Component: The components in ESP-IDF are the basic modules for building applications, each component is usually a relatively independent code base or library, which can implement specific functions or services, and can be reused by applications or other components, similar to the definition of libraries in Python development.
+<ul><li>Component reference: The import of libraries in the Python development environment only requires to "import library name or path", while ESP-IDF is based on the C language, and the importing of libraries is configured and defined through <code>CMakeLists.txt</code>.</li>
+<li>The purpose of CmakeLists.txt: When compiling ESP-IDF, the build tool <code>CMake</code> first reads the content of the top-level <code>CMakeLists.txt</code> in the project directory to read the build rules and identify the content to be compiled. When the required components and demos are imported into the <code>CMakeLists.txt</code>, the compilation tool <code>CMake</code> will import each content that needs to be compiled according to the index. The compilation process is as follows:</li></ul></li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-P4_VSCode_ESP-IDF_GettingStart_240906_02.png" class="image fancybox"><img alt="ESP32-P4 VSCode ESP-IDF GettingStart 240906 02.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-P4_VSCode_ESP-IDF_GettingStart_240906_02.png" decoding="async" loading="lazy" width="898" height="890"></a>
+</p>
+</div>
+</div>
+</div>
+<h2><span class="mw-headline" id="Demo_2">Demo</span></h2>
+<p><a href="https://www.waveshare.com/wiki/File:Demo-flow-01.png" class="image fancybox"><img alt="Demo-flow-01.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/1000px-Demo-flow-01.png" decoding="async" loading="lazy" width="1000" height="54" srcset="/w/upload/7/74/Demo-flow-01.png 1.5x"></a>
+</p>
+<table class="wikitable table table-striped table-bordered" style="width:80%;background: white;">
+<caption>
+<ul><li>ESP32-S3-Touch-AMOLED-2.06 Demo</li></ul>
+</caption>
+<tbody><tr>
+<th>Demo</th>
+<th>Basic Description
+</th></tr>
+<tr>
+<td>01_AXP2101</td>
+<td>Obtain power-related data through the ported XPowersLib to drive AXP2101
+</td></tr>
+<tr>
+<td>02_lvgl_demo_v9</td>
+<td>Run LVGL V9 demo
+</td></tr>
+<tr>
+<td>03_esp-brookesia</td>
+<td>Run esp-brookesia demo, based on the V0.4.2 release version
+</td></tr>
+<tr>
+<td>04_Immersive_block</td>
+<td>Immersive experience of block shaped objects tilting in the direction of gravity using QMI8658
+</td></tr>
+<tr>
+<td>05_Spec_Analyzer</td>
+<td>Implement a simple audio capture analyzer with LVGL
+</td></tr>
+<tr>
+<td>06_videoplayer</td>
+<td>Use LVGL to read AVI video playback from TF card, including audio playback
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="01_AXP2101">01_AXP2101</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This demo demonstrates using ESP-IDF to port XPowersLib, and driving AXP2101 to obtain power-related data through the ported XPowersLib</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Code analysis</b>
+</p>
+<hr>
+<ul><li><b>i2c_init</b>: Initializes the I2C master in preparation for communication with other devices, such as the PMU
+<ul><li>Configure I2C parameters, including setting the master device mode, specifying the SDA and SCL pins, enabling the pull-up resistor, and determining the clock frequency</li>
+<li>Install the I2C driver and apply the configuration to the actual hardware</li></ul></li></ul>
+<ul><li><b>pmu_register_read</b>: Reads a series of bytes of data from a specific register of the PMU
+<ul><li>Perform parameter checks to ensure the incoming parameters are valid and avoid invalid read operations</li>
+<li>Perform I2C operations in two steps, first send the register address to read, then read the data. During the reading process, different processing is carried out according to the length of bytes to be read to ensure accurate reading of the data. At the same time, handle error cases in the I2C communication process and return the corresponding status code so that the upper-layer code can determine if the read operation is successful</li></ul></li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<ul><li>This demo will not light up the screen</li>
+<li>The serial port monitor displays the parameters: chip temperature, charging state, discharging state, standby state, Vbus connected, Vbus condition, charger status, battery voltage, Vbus voltage, system voltage, battery percentage</li></ul>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-1.8-demo-21.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-1.8-demo-21.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-Touch-AMOLED-1.8-demo-21.png" decoding="async" loading="lazy" width="800" height="194"></a>
+</p>
+</div></div>
+<h3><span class="mw-headline" id="02_lvgl_demo_v9">02_lvgl_demo_v9</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This example runs the LVGL V9 demo</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-06.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-06.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-06.png" decoding="async" loading="lazy" width="200" height="245" srcset="/w/upload/d/db/ESP32-S3-Touch-AMOLED-2.06-250722-06.png 1.5x"></a>
+</p>
+</div></div>
+<h3><span class="mw-headline" id="03_esp-brookesia">03_esp-brookesia</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This demo demonstrates the UI interface running with the esp-brookesia framework</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-08.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-08.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-08.png" decoding="async" loading="lazy" width="200" height="250" srcset="/w/upload/3/36/ESP32-S3-Touch-AMOLED-2.06-250722-08.png 1.5x"></a>
+</p>
+</div></div>
+<h3><span class="mw-headline" id="04_Immersive_block">04_Immersive_block</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This demo demonstrates the QMI8658 driving effect, achieving multiple blocks immersive tilting with gravity</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-09.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-09.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-09.png" decoding="async" loading="lazy" width="200" height="232" srcset="/w/upload/5/5f/ESP32-S3-Touch-AMOLED-2.06-250722-09.png 1.5x"></a><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-10.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-10.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-10.png" decoding="async" loading="lazy" width="200" height="239" srcset="/w/upload/5/58/ESP32-S3-Touch-AMOLED-2.06-250722-10.png 1.5x"></a>
+</p>
+</div></div>
+<h3><span class="mw-headline" id="05_Spec_Analyzer">05_Spec_Analyzer</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This demo implements the microphone audio capture function, using FFT to analyze the audio and display it on the screen</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-11.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-11.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-11.png" decoding="async" loading="lazy" width="200" height="249" srcset="/w/upload/6/64/ESP32-S3-Touch-AMOLED-2.06-250722-11.png 1.5x"></a>
+</p>
+</div></div>
+<h3><span class="mw-headline" id="06_videoplayer">06_videoplayer</span></h3>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This demo demonstrates playing an AVI video file from a TF card, which can also play audio</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-12.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-12.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-12.png" decoding="async" loading="lazy" width="200" height="249" srcset="/w/upload/2/25/ESP32-S3-Touch-AMOLED-2.06-250722-12.png 1.5x"></a><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-13.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-13.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-13.png" decoding="async" loading="lazy" width="200" height="245" srcset="/w/upload/b/b4/ESP32-S3-Touch-AMOLED-2.06-250722-13.png 1.5x"></a>
+</p>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Custom audio</b>
+</p>
+<hr>
+<p>Users can customize audio playback segments by following the steps below (some programming knowledge is required)
+</p>
+<ul><li>Select the video you want to play (e.g. a.mp4)</li>
+<li>Install <b>ffmpeg</b> tool
+<ul><li>Convert video files to avi format using ffmpeg</li></ul></li></ul>
+<pre>ffmpeg -i a.mp4 -vcodec mjpeg -s 'resolution width'x'resolution height' -r 30 -q:v 2 -acodec pcm_s16le -ar 44100 -ac 2 a.avi
+</pre>
+<ul><li><ul><li>Put the converted avi format file into the /avi/ directory in the TF card</li>
+<li>Insert the TF card into the development board</li></ul></li>
+<li>Compile and flash</li></ul>
+</div></div>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="FactoryFirmWare">FactoryFirmWare</span></h3>
+<div role="note" class="note note-info">This demo continuously updates. Some applications are based on specific ESP-IDF versions and may require some time to test the updates. Please wait patiently. </div>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+<div style="margin-bottom: 20px;">
+<p><b>Demo description</b>
+</p>
+<hr>
+<ul><li>This demo demonstrates an application created using the esp-brookesia master version, implementing features including but not limited to touch, display, audio capture, audio playback, clock, gyroscope, audio-visual playback, and PMU control</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Hardware connection</b>
+</p>
+<hr>
+<ul><li>Connect the development board to the computer</li>
+<li>Flash firmware using a firmware flashing tool (online, locally, etc.)</li></ul>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Result demonstration</b>
+</p>
+<hr>
+<p><a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-14.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-14.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-14.png" decoding="async" loading="lazy" width="200" height="236" srcset="/w/upload/8/88/ESP32-S3-Touch-AMOLED-2.06-250722-14.png 1.5x"></a>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-15.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-15.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-15.png" decoding="async" loading="lazy" width="200" height="238" srcset="/w/upload/d/d4/ESP32-S3-Touch-AMOLED-2.06-250722-15.png 1.5x"></a>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-16.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-16.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-16.png" decoding="async" loading="lazy" width="200" height="234" srcset="/w/upload/8/8a/ESP32-S3-Touch-AMOLED-2.06-250722-16.png 1.5x"></a>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-19.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-19.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-19.png" decoding="async" loading="lazy" width="200" height="239" srcset="/w/upload/9/94/ESP32-S3-Touch-AMOLED-2.06-250722-19.png 1.5x"></a>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-20.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-20.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-20.png" decoding="async" loading="lazy" width="200" height="232" srcset="/w/upload/4/4c/ESP32-S3-Touch-AMOLED-2.06-250722-20.png 1.5x"></a>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-21.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-21.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-21.png" decoding="async" loading="lazy" width="200" height="239" srcset="/w/upload/a/a0/ESP32-S3-Touch-AMOLED-2.06-250722-21.png 1.5x"></a>
+<a href="https://www.waveshare.com/wiki/File:300px-ESP32-S3-Touch-AMOLED-2.06-250722-22.png" class="image fancybox"><img alt="300px-ESP32-S3-Touch-AMOLED-2.06-250722-22.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-300px-ESP32-S3-Touch-AMOLED-2.06-250722-22.png" decoding="async" loading="lazy" width="200" height="225" srcset="/w/upload/8/8b/300px-ESP32-S3-Touch-AMOLED-2.06-250722-22.png 1.5x"></a>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-23.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-23.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-23.png" decoding="async" loading="lazy" width="200" height="239" srcset="/w/upload/1/1c/ESP32-S3-Touch-AMOLED-2.06-250722-23.png 1.5x"></a>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-24.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-24.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-24.png" decoding="async" loading="lazy" width="200" height="232" srcset="/w/upload/5/5c/ESP32-S3-Touch-AMOLED-2.06-250722-24.png 1.5x"></a>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-25.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-25.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-25.png" decoding="async" loading="lazy" width="200" height="246" srcset="/w/upload/8/8b/ESP32-S3-Touch-AMOLED-2.06-250722-25.png 1.5x"></a>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-26.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-26.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-26.png" decoding="async" loading="lazy" width="200" height="241" srcset="/w/upload/c/ce/ESP32-S3-Touch-AMOLED-2.06-250722-26.png 1.5x"></a>
+<a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-2.06-250722-27.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-2.06-250722-27.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/200px-ESP32-S3-Touch-AMOLED-2.06-250722-27.png" decoding="async" loading="lazy" width="200" height="248" srcset="/w/upload/4/4d/ESP32-S3-Touch-AMOLED-2.06-250722-27.png 1.5x"></a>
+</p>
+</div>
+<div style="margin-bottom: 20px;">
+<p><b>Custom audio</b>
+</p>
+<hr>
+<p>Users can customize audio playback segments by following the steps below (some programming knowledge is required)
+</p>
+<ul><li>Select the video you want to play (e.g. a.mp4)</li>
+<li>Install <b>ffmpeg</b> tool
+<ul><li>Convert video files to avi format using ffmpeg</li></ul></li></ul>
+<pre>ffmpeg -i a.mp4 -vcodec mjpeg -s 'resolution width'x'resolution height' -r 30 -q:v 2 -acodec pcm_s16le -ar 44100 -ac 2 a.avi
+</pre>
+<ul><li><ul><li>Put the converted avi format file into the /avi/ directory in the TF card</li>
+<li>Insert the TF card into the development board</li></ul></li>
+<li>Compile and flash</li></ul>
+</div></div>
+<p><br>
+</p>
+<h1><span class="mw-headline" id="Flash_Firmware_Flashing_and_Erasing">Flash Firmware Flashing and Erasing</span></h1>
+<hr>
+<div class="mw-collapsible-content" style="padding: 10px; background-color: #f9f9f9; border-radius: 10px;">
+    <div style="margin-bottom: 20px;">
+<ul><li><b>The current demo provides test firmware, which can be used to test whether the onboard device functions properly by directly flashing the test firmware</b></li>
+<li><b>bin file path: </b><pre>..\ESP32-S3-Touch-AMOLED-2.06-Demo\Firmware</pre></li></ul>
+<div role="note" class="note note-info"><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/wiki/Flash_Firmware_Flashing_and_Erasing">Flash firmware flashing and erasing </a> for reference </div>
+</div>
+</div>
+<h1><span class="mw-headline" id="Resources">Resources</span></h1>
+<h2><span class="mw-headline" id="Schematic_Diagram">Schematic Diagram</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06/ESP32-S3-Touch-AMOLED-2.06.pdf">ESP32-S3-Touch-AMOLED-2.06 Schematic</a></li></ul>
+<h2><span class="mw-headline" id="Project_Diagram">Project Diagram</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06/Esp32-s3-touch-amoled-2_06_dimensions.pdf">ESP32-S3-Touch-AMOLED-2.06 Dimensional drawing</a></li></ul>
+<h2><span class="mw-headline" id="Demo_3">Demo</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://github.com/waveshareteam/ESP32-S3-Touch-AMOLED-2.06">Github Demo</a></li></ul>
+<h2><span class="mw-headline" id="Datasheets">Datasheets</span></h2>
+<h3><span class="mw-headline" id="ESP32-S3">ESP32-S3</span></h3>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/common/Esp32-s3_datasheet_en.pdf">ESP32-S3 Series Datasheet</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/common/Esp32-s3_technical_reference_manual_en.pdf">ESP32-S3 Technical Reference Manual</a></li></ul>
+<h3><span class="mw-headline" id="Other_Components">Other Components</span></h3>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/common/QMI8658C.pdf">QMI8658 Datasheet</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/common/PCF85063A.pdf">PCF85063 Datasheet</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/common/X-power-AXP2101_SWcharge_V1.0.pdf">AXP2101 Datasheet</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/common/ES8311.DS.pdf">ES8311 Datasheet</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/common/ES8311.user.Guide.pdf">ES8311 User Guide</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/common/FT3168.pdf">FT3168 Datasheet</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/common/ES7210-datasheet.pdf">ES7210 Datasheet</a></li></ul>
+<h2><span class="mw-headline" id="Software">Software</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/common/Zimo221.7z">Zimo221 Chinese character conversion software</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/common/Image2Lcd2.9.zip">Image2Lcd image bitmap conversion software</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://dl.espressif.com/public/flash_download_tool.zip">Flash_download_tool</a></li></ul>
+<h2><span class="mw-headline" id="Other_Resource_Links">Other Resource Links</span></h2>
+<ul><li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/wiki/Image_extraction">Image bitmap conversion tutorial</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/wiki/E-Paper_Font_Tutorial">Font library conversion tutorial</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://docs.micropython.org/en/latest/">MicroPython official documentation</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://docs.espressif.com/projects/arduino-esp32/en/latest/index.html">ESP32 Arduino Core documentation</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://github.com/espressif/arduino-esp32">arduino-esp32</a></li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://github.com/espressif/esp-idf">ESP-IDF</a></li></ul>
+<h2><span class="mw-headline" id="Project_Resources">Project Resources</span></h2>
+<p>This section features third - party project resources. We merely provide links and bear no responsibility for content updates or maintenance. Thank you for your understanding.<br>
+</p><p><br>
+<b>Volos Projects ESP32 + Smartwatch = Smart Home Control!</b>
+<iframe width="400" height="315" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/pLcABak9Scc.html" frameborder="0" allowfullscreen=""></iframe>
+</p>
+<ul><li>Youtube: <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.youtube.com/watch?v=pLcABak9Scc">https://www.youtube.com/watch?v=pLcABak9Scc</a></li>
+<li>Github: <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://github.com/VolosR/waveshareControl">https://github.com/VolosR/waveshareControl</a></li></ul>
+<div class="tabbertab" title="FAQ" id="myfaq">
+<h1><span class="mw-headline" id="FAQ">FAQ</span></h1>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion1">
+								<b>Question:</b> How to get more library support for the demo? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion1" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>You can subscribe to this repository and raise an issue to describe your requirements. The engineers will assess your request as soon as possible:
+<a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://github.com/waveshareteam/ESP32-display-support/tree/master">ESP32-display-support</a>
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion2">
+								<b>Question:</b> Won't turn on, does nothing &amp; the screen is not lighting up 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion2" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>Generally, the product you receive only needs to be connected to a 5V Type-C power supply to turn on the screen. After the verification is completed, follow the battery installation tutorial to install the battery and use it.You can also use the provided Firmware Factorybin for self-checking.
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion3">
+								<b>Question:</b> What platforms does the AI large model example of speech dialog support? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion3" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>The product is equipped with ES8311 audio codec chip, onboard speaker, and SMD microphone. And it can achieve voice dialogue function;<br>
+Integration with various platforms has been fully verified and completed at present, supporting mainstream platforms such as DouBao, Wenxin Yiyan, ChatGPT, and Tuya Smart. The demos will gradually be opened up to <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://github.com/waveshareteam/ESP32-AIChats">ESP32-AIChats</a>
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion4">
+								<b>Question:</b> How is the heat generation of this product, and will it affect the display? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion4" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>The measured temperature is at room temperature 20°C, the wifi STA and AP modes are turned on, and the battery is in the charging state. The test lasts for half an hour, and the highest temperature read through AXP2101 temperature data is 46 ℃. During the normal discharge process, the temperature will decrease by 3-4 ℃. If WiFi/Bluetooth function is not turned on, it can maintain a stable temperature of around 36 ℃<br>
+This AMOLED screen can withstand high temperatures; at 40 to 60 degrees Celsius, it will not affect the screen display or touch function. In high temperature and high humidity conditions, there may be some polarization, which is within the normal range. <br>
+For this product, it is recommended to use the low-power operation mode of ESP32-S3 to complete the application in some scenarios.
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion5">
+								<b>Question:</b> Why does the flashing fail? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion5" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>1. When the serial port is occupied, the flashing will fail. Close the serial port monitor and try to flash again<br>
+2. When the ESP32 program crashes, the flashing will fail, and the development module needs to be completely powered off, hold down BOOT and power it on again to enter the strong download mode and then flash it. It will not automatically exit the download mode after flashing, so you need to power off and restart again<br>
+<b>Note: To power on this product again, press and hold the PWR button for at least 6 seconds, and then press the PWR button again</b>
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion6">
+								<b>Question:</b> Why did the compilation fail? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion6" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>When the project fails to be compiled, check the development environment.
+</p>
+<ol><li>Arduino IDE compiling the project shows the situation in the image, you need to modify <b>Partition Scheme-&gt;16M Flash(3MB APP/9.9MB FATFS)</b>。 <a href="https://www.waveshare.com/wiki/File:ESP32-S3-Touch-AMOLED-1.8-FAQ_241227_01.png" class="image fancybox"><img alt="ESP32-S3-Touch-AMOLED-1.8-FAQ 241227 01.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/ESP32-S3-Touch-AMOLED-1.8-FAQ_241227_01.png" decoding="async" loading="lazy" width="1121" height="142"></a></li>
+<li>When the ESP-IDF project compilation fails, delete the build, managed_components, and dependencies.lock, and then compile again. If the error persists, check whether the ESP-IDF version and the CMakeList.txt in the project directory are correctly recognized</li></ol>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion7">
+								<b>Question:</b> Why does the module keep resetting? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion7" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>In this case, due to the crash of the program, the USB cannot work normally, you can press and hold the BOOT button and then power on, at this time, the module can enter the download mode to flash the firmware (program) to solve the situation.
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion8">
+								<b>Question:</b> How to deal with the first compilation of the program being extremely slow?
+							</a>
+						</h4>
+					</div>
+					<div id="accordion8" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>In the Arduino IDE, the first compilation loads and compiles all the dependencies, so it's normal for the first compilation task to be time-consuming. Just wait patiently<br>
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion9">
+								<b>Question:</b> How to handle the display "waiting for download..." on the serial port after successfully ESP-IDF flashing? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion9" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>Power it on again<br>
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion10">
+								<b>Question:</b> How to measure the battery voltage of this product? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion10" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>This product has an on-board AXP2101, which can measure all kinds of battery data, such as: chip temperature, whether it is charged, whether it is connected to the power supply, charging status, battery voltage, charging voltage, battery power, etc.
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion11">
+								<b>Question:</b> This product measures the percentage of battery remaining capacity. Why does the result fluctuate greatly? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion11" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>The battery capacity measurement of the AXP2101 is based on battery voltage, but battery capacity does not vary linearly, so large percentage fluctuations may occur during measurement. Especially in the case of plugging and unplugging chargers, load changes, or battery aging, the fluctuations become more noticeable. The measured percentages are for reference only, and the actual voltage is used as a measure of capacity.
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion12">
+								<b>Question:</b> Can you provide the 3D file for the casing? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion12" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>It is not provided.
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion13">
+								<b>Question:</b> Can both buttons of this product be programmed for use? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion13" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>Yes, the two buttons of this product are BOOT and PWR. The functions are as follows:<br>
+1. BOOT: Press and then power on, and the development board enters download mode (commonly used when the program freezes or the USB GPIO is occupied); under normal working conditions, the GPIO0 can detect the high and low level of the button to determine the action, and the low level is pressed, which can recognize click, double-click, multi-click, and long-press actions. <br>
+2.PWR: In the power-on state, press and hold for 6s to power off, in the power-off state (power off to charge the battery), click to power on; Under normal working conditions, the action can be judged by the high and low levels of the EXIO6 detection buttons of the extended IO, and the high level is pressed, which can identify the actions of single click, double click, multiple click and long press (long press should not exceed 6s, otherwise the power will be turned off).
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion14">
+								<b>Question:</b> Does this product support Bluetooth? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion14" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>The core chip of this product is ESP32-S3R8, which supports wireless communication functions such as 2.4GHz WiFi and Bluetooth LE 5, and has an onboard SMD antenna, and the antenna gain has been adjusted to the optimum, which can support the use of Bluetooth and WiFi. For details, please refer to <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://files.waveshare.com/wiki/common/Esp32-s3_datasheet_en.pdf">ESP32-S3 datasheet</a> 
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion15">
+								<b>Question:</b> Does this product support Chinese display? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion15" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>This product uses ESP32-S3R8 as the core, connects the screen via QSPI protocol, fully supports Chinese display, but requires meeting the following conditions:<br>
+1. Character encoding support is required, and strings that support UNICODE-8 encoding can be rendered to the screen<br>
+2. Font library support<br>
+3. Display library support, LVGL or Arduino_GFX are supported
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion16">
+								<b>Question:</b> What is the maximum brightness of the screen of this product? How to control the screen brightness? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion16" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>600nit;<br>
+Write 0x00 (darkest, backlight off) ~ 0xFF (brightest) to the 0x51 via QSPI to control the brightness. <br>
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion17">
+								<b>Question:</b> What chip is used for the screen of this product? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion17" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>Screen display chip: CO5300;<br>
+Screen touch chip: FT3168
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion18">
+								<b>Question:</b> What is this product developed with? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion18" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>ESP32-S3-Touch-AMOLED-2.06 is based on the ESP32-S3R8 chip, supports ESP-IDF and its ecosystem, and can be developed using ESP-IDF or arduino-esp32 Core. ESP-IDF can be used with Vscode, and arduino-esp32 can be used with Arduino IDE or PlatformIO.
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion19">
+								<b>Question:</b> Is this product waterproof? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion19" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>It is not waterproof and should be kept dry when used
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion20">
+								<b>Question:</b> What size is this battery? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion20" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>The recommended battery specification is 4*27*28 400mAh, which can be used for about 1 hour in the regular full-light state, 3~4 hours when the screen backlight is turned off, and about 6 hours in full low-power scenarios.
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion21">
+								<b>Question:</b> Why do the LVGL examples run less smoothly on the Arduino IDE compared to ESP-IDF? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion21" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>The upper driver of the GFX Arduino LVGL is the Arduino TFT library, and the ability to read and write images accelerated by DMA is limited in this scenario. The LVGL examples provided by ESP-IDF enable double buffering and anti-tearing optimization operations, so the results are better. <br>
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion22">
+								<b>Question:</b> How to check the COM port I use? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion22" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>Windows system:<br>
+①View through Device Manager:
+Press the Windows + R keys to open the "Run" dialog box;
+Input devmgmt.msc and press Enter to open Device Manager;
+Expand the "Port (COM and LPT)" section, here it will list all the COM ports and their current status. <br>
+②Use the command prompt to view:
+Open the Command Prompt (CMD);
+enter the mode command, which will display status information for all COM ports. <br>
+③Check hardware connections:
+If you have already connected external devices to the COM port, the device usually occupies a port number, which can be determined by checking the connected hardware. <br>
+Linux system:<br>
+①Use the dmesg command to view:
+Open the terminal. <br>
+①Use the ls command to view:
+Enter ls /dev/ttyS* or ls /dev/ttyUSB* to list all serial port devices. <br>
+③Use the setserial command to view:
+Enter setserial -g /dev/ttyS* to view the configuration information of all serial port devices.
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion23">
+								<b>Question:</b> Why is there no output from the monitor after running the code, even though the code is correct and successfully flashed? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion23" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>The Type-C flashing and debugging port of ESP32-S3-Touch-AMOLED-2.06 is directly output from ESP32-S3 USB. In the Arduino IDE development environment, it supports printf function for printing and output. If you want to support Serial function for printing and output, you need to enable USB CDC On Boot function or HWCDC declaration. For this, please refer to the demonstration in the demo. ESP-IDF usually uses ESP_LOGD and ESP-ERROR_CECK for printing output.
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion24">
+								<b>Question:</b> Can you help me with the code? Can you help me modify the code? 
+							</a>
+						</h4>
+					</div>
+					<div id="accordion24" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<p>This product is positioned as a development board and is not a finished product. Regarding the product ecosystem, ESP32 is a core product with a mature ecosystem and a friendly development environment. We do not assist in modifying the code. As creators and geeks, please use your DIY abilities. If you have any questions, please feel free to ask our engineers for answers. <br>
+If you think our products are good, and you want to customize hardware, casings, software, etc. in batches, please contact business sales team<br>
+<a href="https://www.waveshare.com/wiki/File:%E6%89%B9%E9%87%8F%E5%AE%9A%E5%88%B6%E5%9B%BE%E7%89%87.png" class="image fancybox"><img alt="批量定制图片.png" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/600px-批量定制图片.png" decoding="async" loading="lazy" width="600" height="511" srcset="/w/upload/0/05/%E6%89%B9%E9%87%8F%E5%AE%9A%E5%88%B6%E5%9B%BE%E7%89%87.png 1.5x"></a>
+</p>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#accordion25">
+								<b>Question:</b> How to use SquareLine Studio to design interfaces?
+							</a>
+						</h4>
+					</div>
+					<div id="accordion25" class="panel-collapse collapse in">
+						<div class="panel-body">
+<div>&nbsp;<b>Answer:</b></div>
+<div>
+<ul><li>Please refer to <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.waveshare.com/wiki/Waveshare_SquareLine_Studio">SquareLine Studio tutorial</a></li></ul>
+</div>
+<div style="display:none;"></div>
+<div style="display:none;"></div>
+<p><font color="red" style="display:none;"></font>
+</p>
+						</div>
+					</div>
+				</div>
+</div>
+<p><br>
+</p>
+</div>
+<div class="tabbertab" title="Support" id="mysupport">
+<h1><span class="mw-headline" id="Support">Support</span></h1>
+<p><br>
+<br>
+</p>
+<div style="background:linear-gradient(to bottom right,#91C942,#7DB036); border-radius:15px; width:100%;min-width:750px;">
+<div style="display:flex;flex-direction: row;align-items: flex-start;">
+<div style="flex:l; font-size:15px; width:70%; margin-top:20px; margin-bottom:20px; margin-right:40px;padding-left:40px;">
+<p style="font-size:20px; font-weight:bold;">
+Technical Support
+</p>
+<p>
+If you need technical support or have any feedback/review, please click the <b>Submit Now</b> button to submit a ticket, Our support team will check and reply to you within 1 to 2 working days. Please be patient as we make every effort to help you to resolve the issue. 
+<br> 
+Working Time: 9 AM - 6 PM GMT+8 (Monday to Friday)
+</p>
+</div>
+<div style="margin-top:94px;">
+<div id="service" style="display:flex; flex:r; background-color:#393939; color:white; text-align:center; font-size:20px; border-radius:20px;">
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://service.waveshare.com/">Submit Now</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<!-- 
+NewPP limit report
+Cached time: 20260528204501
+Cache expiry: 0
+Dynamic content: true
+Complications: []
+CPU time usage: 0.287 seconds
+Real time usage: 0.442 seconds
+Preprocessor visited node count: 1910/1000000
+Post‐expand include size: 33292/2097152 bytes
+Template argument size: 28846/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 26940/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  165.154      1 -total
+ 48.63%   80.313      1 Template:ESP32-S3-Touch-AMOLED-2.06-FAQ
+ 40.29%   66.534     25 Template:FAQ
+ 11.94%   19.715      1 Template:Infobox_item
+ 10.04%   16.583     10 Template:Note
+  9.06%   14.968      1 Template:Run_the_first_Arduino_demo
+  7.03%   11.613      1 Template:Li-Po_Terms_and_Conditions
+  6.81%   11.249      1 Template:Run_the_first_ESP-IDF_demo
+  5.45%    9.000      1 Template:Servicebox1
+-->
+</div></div>								<div class="printfooter">
+				Retrieved from "<a dir="ltr" href="https://www.waveshare.com/w/index.php?title=ESP32-S3-Touch-AMOLED-2.06&amp;oldid=109509">https://www.waveshare.com/w/index.php?title=ESP32-S3-Touch-AMOLED-2.06&amp;oldid=109509</a>"				</div>
+												<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://www.waveshare.com/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="https://www.waveshare.com/w/index.php?title=Category:GPIO_interface&amp;action=edit&amp;redlink=1" class="new" title="Category:GPIO interface (page does not exist)">GPIO interface</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://www.waveshare.com/wiki/Category:UART_interface" title="Category:UART interface">UART interface</a></li><li><a href="https://www.waveshare.com/wiki/Category:USB_interface" title="Category:USB interface">USB interface</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+			<!-- /bodyContent -->
+		</div>
+						</div>
+				</div>
+			</div>
+			<!-- /content -->
+
+			<!-- sidebar-left -->
+			<div class="sidebar-wrapper sidebar-left-wrapper">
+				<div class="sidebar-container container">
+					<div class="row">
+						<div id="sidebar-left" class="col-md-2 col-md-offset-0">
+							<div id="tweekiTOC"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading" style="display: table;"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none">
+<ul class="nav">
+<li class="toclevel-1 tocsection-1"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
+<ul class="nav">
+<li class="toclevel-2 tocsection-2"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Introduction_2"><span class="tocnumber">1.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Features"><span class="tocnumber">1.2</span> <span class="toctext">Features</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Hardware_Description"><span class="tocnumber">1.3</span> <span class="toctext">Hardware Description</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Pinout_Definition"><span class="tocnumber">1.4</span> <span class="toctext">Pinout Definition</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Dimensions"><span class="tocnumber">1.5</span> <span class="toctext">Dimensions</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Screen_Description"><span class="tocnumber">1.6</span> <span class="toctext">Screen Description</span></a>
+<ul class="nav">
+<li class="toclevel-3 tocsection-8"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Touch_and_its_Controller"><span class="tocnumber">1.6.1</span> <span class="toctext">Touch and its Controller</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Battery_Installation_Guide"><span class="tocnumber">2</span> <span class="toctext">Battery Installation Guide</span></a></li>
+<li class="toclevel-1 tocsection-10 active"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Usage_Instructions"><span class="tocnumber">3</span> <span class="toctext">Usage Instructions</span></a>
+<ul class="nav">
+<li class="toclevel-2 tocsection-11"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Development_Tool"><span class="tocnumber">3.1</span> <span class="toctext">Development Tool</span></a>
+<ul class="nav">
+<li class="toclevel-3 tocsection-12"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Arduino_IDE"><span class="tocnumber">3.1.1</span> <span class="toctext">Arduino IDE</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#ESP-IDF"><span class="tocnumber">3.1.2</span> <span class="toctext">ESP-IDF</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14 active"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Components_Preparation"><span class="tocnumber">3.2</span> <span class="toctext">Components Preparation</span></a>
+<ul class="nav">
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Precautions_for_Using_Lithium_Batteries"><span class="tocnumber">3.2.1</span> <span class="toctext">Precautions for Using Lithium Batteries</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Working_with_Arduino"><span class="tocnumber">4</span> <span class="toctext">Working with Arduino</span></a>
+<ul class="nav">
+<li class="toclevel-2 tocsection-16"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Environment_Setup"><span class="tocnumber">4.1</span> <span class="toctext">Environment Setup</span></a>
+<ul class="nav">
+<li class="toclevel-3 tocsection-17"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Download_and_Install_Arduino_IDE"><span class="tocnumber">4.1.1</span> <span class="toctext">Download and Install Arduino IDE</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Install_ESP32_Development_Board"><span class="tocnumber">4.1.2</span> <span class="toctext">Install ESP32 Development Board</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Install_Library"><span class="tocnumber">4.1.3</span> <span class="toctext">Install Library</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Arduino_Project_Parameter_Settings"><span class="tocnumber">4.1.4</span> <span class="toctext">Arduino Project Parameter Settings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Run_the_First_Arduino_Demo"><span class="tocnumber">4.2</span> <span class="toctext">Run the First Arduino Demo</span></a>
+<ul class="nav">
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#New_Project"><span class="tocnumber">4.2.1</span> <span class="toctext">New Project</span></a></li>
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Compile_and_Flash_Demos"><span class="tocnumber">4.2.2</span> <span class="toctext">Compile and Flash Demos</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Demo"><span class="tocnumber">4.3</span> <span class="toctext">Demo</span></a>
+<ul class="nav">
+<li class="toclevel-3 tocsection-22"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#01_HelloWorld"><span class="tocnumber">4.3.1</span> <span class="toctext">01_HelloWorld</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#02_GFX_AsciiTable"><span class="tocnumber">4.3.2</span> <span class="toctext">02_GFX_AsciiTable</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#03_GFX_PCF85063_simpleTime"><span class="tocnumber">4.3.3</span> <span class="toctext">03_GFX_PCF85063_simpleTime</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#04_LVGL_QMI8658_ui"><span class="tocnumber">4.3.4</span> <span class="toctext">04_LVGL_QMI8658_ui</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#05_LVGL_AXP2101_ADC_Data"><span class="tocnumber">4.3.5</span> <span class="toctext">05_LVGL_AXP2101_ADC_Data</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#06_LVGL_Arduino_v9"><span class="tocnumber">4.3.6</span> <span class="toctext">06_LVGL_Arduino_v9</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#07_LVGL_SD_Test"><span class="tocnumber">4.3.7</span> <span class="toctext">07_LVGL_SD_Test</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#08_ES8311"><span class="tocnumber">4.3.8</span> <span class="toctext">08_ES8311</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-30"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Working_with_ESP-IDF"><span class="tocnumber">5</span> <span class="toctext">Working with ESP-IDF</span></a>
+<ul class="nav">
+<li class="toclevel-2 tocsection-31"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Environment_Setup_2"><span class="tocnumber">5.1</span> <span class="toctext">Environment Setup</span></a>
+<ul class="nav">
+<li class="toclevel-3 tocsection-32"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Download_and_Install_Visual_Studio"><span class="tocnumber">5.1.1</span> <span class="toctext">Download and Install Visual Studio</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Install_Espressif_IDF_Plugin"><span class="tocnumber">5.1.2</span> <span class="toctext">Install Espressif IDF Plugin</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Run_the_First_ESP-IDF_Demo"><span class="tocnumber">5.2</span> <span class="toctext">Run the First ESP-IDF Demo</span></a>
+<ul class="nav">
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#New_Project_2"><span class="tocnumber">5.2.1</span> <span class="toctext">New Project</span></a></li>
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Create_Demo"><span class="tocnumber">5.2.2</span> <span class="toctext">Create Demo</span></a></li>
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Modify_COM_Port"><span class="tocnumber">5.2.3</span> <span class="toctext">Modify COM Port</span></a></li>
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Modify_Driver_Object"><span class="tocnumber">5.2.4</span> <span class="toctext">Modify Driver Object</span></a></li>
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Other_Status_Bar_Functions"><span class="tocnumber">5.2.5</span> <span class="toctext">Other Status Bar Functions</span></a></li>
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Compile.2C_Flash_and_Serial_Port_Monitor"><span class="tocnumber">5.2.6</span> <span class="toctext">Compile, Flash and Serial Port Monitor</span></a></li>
+<li class="toclevel-3"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Use_the_IDF_Demos"><span class="tocnumber">5.2.7</span> <span class="toctext">Use the IDF Demos</span></a>
+<ul class="nav">
+<li class="toclevel-4"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Open_In_the_Software"><span class="tocnumber">5.2.7.1</span> <span class="toctext">Open In the Software</span></a></li>
+<li class="toclevel-4"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Open_from_Outside_the_Software"><span class="tocnumber">5.2.7.2</span> <span class="toctext">Open from Outside the Software</span></a></li>
+<li class="toclevel-4"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#ESP-IDF_Project_Details"><span class="tocnumber">5.2.7.3</span> <span class="toctext">ESP-IDF Project Details</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-34"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Demo_2"><span class="tocnumber">5.3</span> <span class="toctext">Demo</span></a>
+<ul class="nav">
+<li class="toclevel-3 tocsection-35"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#01_AXP2101"><span class="tocnumber">5.3.1</span> <span class="toctext">01_AXP2101</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#02_lvgl_demo_v9"><span class="tocnumber">5.3.2</span> <span class="toctext">02_lvgl_demo_v9</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#03_esp-brookesia"><span class="tocnumber">5.3.3</span> <span class="toctext">03_esp-brookesia</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#04_Immersive_block"><span class="tocnumber">5.3.4</span> <span class="toctext">04_Immersive_block</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#05_Spec_Analyzer"><span class="tocnumber">5.3.5</span> <span class="toctext">05_Spec_Analyzer</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#06_videoplayer"><span class="tocnumber">5.3.6</span> <span class="toctext">06_videoplayer</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#FactoryFirmWare"><span class="tocnumber">5.3.7</span> <span class="toctext">FactoryFirmWare</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-42"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Flash_Firmware_Flashing_and_Erasing"><span class="tocnumber">6</span> <span class="toctext">Flash Firmware Flashing and Erasing</span></a></li>
+<li class="toclevel-1 tocsection-43"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Resources"><span class="tocnumber">7</span> <span class="toctext">Resources</span></a>
+<ul class="nav">
+<li class="toclevel-2 tocsection-44"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Schematic_Diagram"><span class="tocnumber">7.1</span> <span class="toctext">Schematic Diagram</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Project_Diagram"><span class="tocnumber">7.2</span> <span class="toctext">Project Diagram</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Demo_3"><span class="tocnumber">7.3</span> <span class="toctext">Demo</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Datasheets"><span class="tocnumber">7.4</span> <span class="toctext">Datasheets</span></a>
+<ul class="nav">
+<li class="toclevel-3 tocsection-48"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#ESP32-S3"><span class="tocnumber">7.4.1</span> <span class="toctext">ESP32-S3</span></a></li>
+<li class="toclevel-3 tocsection-49"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Other_Components"><span class="tocnumber">7.4.2</span> <span class="toctext">Other Components</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-50"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Software"><span class="tocnumber">7.5</span> <span class="toctext">Software</span></a></li>
+<li class="toclevel-2 tocsection-51"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Other_Resource_Links"><span class="tocnumber">7.6</span> <span class="toctext">Other Resource Links</span></a></li>
+<li class="toclevel-2 tocsection-52"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Project_Resources"><span class="tocnumber">7.7</span> <span class="toctext">Project Resources</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-53"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#FAQ"><span class="tocnumber">8</span> <span class="toctext">FAQ</span></a></li>
+<li class="toclevel-1 tocsection-54"><a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.06#Support"><span class="tocnumber">9</span> <span class="toctext">Support</span></a></li>
+</ul>
+<div id="toctotop"><a href="javascript:scrollTo(0,0);">To Top</a></div></div></div>						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /sidebar-left -->
+					<!-- footer -->
+			<div id="footer" role="contentinfo" class="footer container footer-sticky bg-light" style="margin-top: 0px; opacity: 1;">
+			<ul id="footer-custom"><li class="dropup"><a href="https://www.waveshare.com/w/index.php?title=Special:UserLogin&amp;returnto=ESP32-S3-Touch-AMOLED-2.06" title="You are encouraged to log in; however, it is not mandatory [ctrl-option-o]" accesskey="o">Login / Create Account</a></li></ul><div style="clear:both"></div>			</div>
+			<!-- /footer -->
+		
+<script>
+var fbtFancyBoxOptions = {};
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.287","walltime":"0.442","ppvisitednodes":{"value":1910,"limit":1000000},"postexpandincludesize":{"value":33292,"limit":2097152},"templateargumentsize":{"value":28846,"limit":2097152},"expansiondepth":{"value":6,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":26940,"limit":5000000},"timingprofile":["100.00%  165.154      1 -total"," 48.63%   80.313      1 Template:ESP32-S3-Touch-AMOLED-2.06-FAQ"," 40.29%   66.534     25 Template:FAQ"," 11.94%   19.715      1 Template:Infobox_item"," 10.04%   16.583     10 Template:Note","  9.06%   14.968      1 Template:Run_the_first_Arduino_demo","  7.03%   11.613      1 Template:Li-Po_Terms_and_Conditions","  6.81%   11.249      1 Template:Run_the_first_ESP-IDF_demo","  5.45%    9.000      1 Template:Servicebox1"]},"cachereport":{"timestamp":"20260528204501","ttl":0,"transientcontent":true}}});mw.config.set({"wgBackendResponseTime":835});});</script>	<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a03019bc5b41cc67',t:'MTc4MDAwMTEwMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; visibility: hidden;" src="./ESP32-S3-Touch-AMOLED-2.06 - Waveshare Wiki_files/saved_resource.html"></iframe>
+
+</body><div style="padding: 0px; margin: 3px; background: padding-box padding-box rgb(248, 248, 255); border: 3px solid rgba(242, 242, 242, 0.6); border-radius: 2px; box-shadow: rgb(102, 102, 102) 0px 0px 2px; transition: opacity 0.2s; visibility: visible; cursor: default; display: none; z-index: 2147483647; inset: auto; width: 0px; height: 0px; position: fixed !important; box-sizing: content-box !important; max-width: none !important; max-height: none !important; opacity: 0;" data-rotate=""><img alt="" style="display: none; background: none; position: relative; width: 100%; height: 100%; max-width: inherit; max-height: inherit; margin: 0px; padding: 0px; border: 0px; visibility: inherit !important; image-orientation: initial !important;"><video autoplay="" style="display: none; background: none; position: relative; width: 100%; height: 100%; max-width: inherit; max-height: inherit; margin: 0px; padding: 0px; border: 0px; box-shadow: rgb(241, 101, 41) 0px 0px 0px 1px; visibility: inherit !important;"></video><div style="left: 0px; right: auto; display: none; cursor: inherit; position: absolute; width: auto; height: auto; border: 0px; white-space: pre-line; font: 13px / 1.4em &quot;Trebuchet MS&quot;, sans-serif; box-shadow: rgb(221, 221, 221) 0px 0px 1px inset; padding: 0px 4px; border-radius: 3px; background: rgba(0, 0, 0, 0.75) !important; color: rgb(255, 255, 255) !important; top: -18px;"><b style="margin-right: 4px; display: none; transition: background-color 0.1s; border-radius: 3px; padding: 0px 2px;"></b><b style="margin-right: 4px; display: none;"></b><b style="margin-right: 4px; display: none; color: rgb(204, 255, 208);"></b><span style="color: inherit; display: inline-block;"></span></div><style><br>                #imagus-menu {<br>                    interpolate-size: allow-keywords;<br>                    box-sizing: border-box;<br>                    position: absolute;<br>                    right: 8px;<br>                    top: 8px;<br>                    border-radius: 8px;<br>                    overflow: hidden;<br>                    padding: 4px;<br>                    z-index: 10;<br>                    display: none;<br>                    background: #00000040;<br>                    opacity: 0;<br>                    height: 48px;<br>                    transition-property: opacity, height, color, background-color;<br>                    transition-duration: .1s;<br>                    transition-delay: .5s, .5s, .5s, .5s;<br>                    flex-direction: column;<br>                    gap: 4px;<br>                    color: black;<br>                    backdrop-filter: blur(6px);<br>                }<br>                [data-fz="true"] > #imagus-menu {<br>                    display: flex;<br>                }<br>                <br>                    div:hover > #imagus-menu {<br>                        opacity: 1;<br>                        transition: opacity .1s 0s, height .1s .5s, color .1s .5s, background-color .1s .5s;<br>                    }<br>                <br>                div:hover > #imagus-menu:hover {<br>                    opacity: 1;<br>                    height: unset;<br>                    background: #00000070;<br>                    transition-delay: 0s;<br>                }<br>                #imagus-menu i:first-child {<br>                    font-size: 22px;<br>                }<br>                #imagus-menu i {<br>                    width: 40px;<br>                    height: 40px;<br>                    display: flex;<br>                    justify-content: center;<br>                    align-items: center;<br>                    cursor: pointer;<br>                    transition: inherit;<br>                    background: #ffffff80;<br>                    border-radius: 4px;<br>                    font: 20px sans-serif;<br>                    flex-shrink: 0;<br>                    color: #00000082<br>                }<br>                #imagus-menu:hover i {<br>                    color: black;<br>                    background: #b5b5b5;<br>                }<br>                #imagus-menu:hover i:hover {<br>                    background: #ebebeb;<br>                }<br>                #imagus-menu i span:nth-child(2),<br>                #imagus-menu:hover i span:nth-child(1) {<br>                    display: none;<br>                }<br>                #imagus-menu:hover i span:nth-child(2) {<br>                    display: block;<br>                }<br>                [data-rotate="90"] #imagus-menu {<br>                    left: -40px;<br>                    bottom: unset;<br>                    right: unset;<br>                    rotate: -90deg;<br>                    transform-origin: top right;<br>                }<br>                [data-rotate="180"] #imagus-menu {<br>                    left: 6px;<br>                    top: unset;<br>                    bottom: 6px;<br>                    right: unset;<br>                    rotate: 180deg;<br>                    transform-origin: center;<br>                }<br>                [data-rotate="270"] #imagus-menu {<br>                    top: calc(100% - 6px);<br>                    bottom: unset;<br>                    right: 6px;<br>                    rotate: 90deg;<br>                    transform-origin: top right;<br>                }<br><br>                #imagus-glr {<br>                    position: absolute;<br>                    inset: 0;<br>                    display: flex;<br>                    flex-wrap: wrap;<br>                    align-content: flex-start;<br>                    justify-content: flex-start;<br>                    overflow: auto;<br>                    overscroll-behavior: contain;<br>                    cursor: default;<br>                    z-index: 5;<br>                    background: #dedede;<br>                }<br>                #imagus-glr > * {<br>                    width: 150px;<br>                    height: 150px;<br>                    margin: 4px;<br>                }<br>                #imagus-glr video,<br>                #imagus-glr img {<br>                    width: 100%;<br>                    height: 100%;<br>                    object-fit: cover;<br>                    cursor: pointer;<br>                    overflow-clip-margin: unset;<br>                    background: white;<br>                    margin: 0;<br>                }<br>                #imagus-glr > .vid {<br>                    display: flex;<br>                    justify-content: center;<br>                    align-items: center;<br>                }<br>                #imagus-glr > .vid:before,<br>                #imagus-glr > .vid:after {<br>                    content: "";<br>                    position: absolute;<br>                    opacity: 0.5;<br>                    pointer-events: none;<br>                }<br>                #imagus-glr > .vid:before {<br>                    background: #000000;<br>                    width: 80px;<br>                    height: 80px;<br>                    border-radius: 20px;<br>                }<br>                #imagus-glr > .vid:after {<br>                    width: 0;<br>                    height: 0;<br>                    border-top: 22px solid transparent;<br>                    border-bottom: 22px solid transparent;<br>                    border-left: 34px solid #ffffff;<br>                    margin-left: 8px;<br>                }<br>            </style><div id="imagus-glr" style="display: none;"></div><div id="imagus-menu"><i data-action="hide" title="Hide toolbar"><span>≡</span><span>⨉</span></i><i data-action="download" title="Save">S</i><i data-action="open" title="Open in new tab
++Ctrl/Middle click: background
++Shift: popup window">O</i><i data-action="gallery" title="Gallery">G</i><i data-action="goto" title="Goto / Search">#</i><i data-action="rotate" title="Rotate right">↻</i><i data-action="preferences" title="Preferences">P</i></div></div><img alt="" draggable="false" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOng9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBub25lIj48Zz48cGF0aCBpZD0icCIgZD0iTTMzIDQyYTEgMSAwIDAgMSA1NS0yMCAzNiAzNiAwIDAgMC01NSAyMCIvPjx1c2UgeDpocmVmPSIjcCIgdHJhbnNmb3JtPSJyb3RhdGUoNzIgNTAgNTApIi8+PHVzZSB4OmhyZWY9IiNwIiB0cmFuc2Zvcm09InJvdGF0ZSgxNDQgNTAgNTApIi8+PHVzZSB4OmhyZWY9IiNwIiB0cmFuc2Zvcm09InJvdGF0ZSgyMTYgNTAgNTApIi8+PHVzZSB4OmhyZWY9IiNwIiB0cmFuc2Zvcm09InJvdGF0ZSgyODggNTAgNTApIi8+PGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIHZhbHVlcz0iMzYwIDUwIDUwOzAgNTAgNTAiIGR1cj0iMS44cyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2c+PC9zdmc+" style="padding: 5px; background-clip: padding-box; width: 38px; height: 38px; z-index: 2147483647; display: none; inset: auto; margin: 0px; transition: background-color 0.5s, opacity 0.2s, top 0.15s ease-out, left 0.15s ease-out; border-radius: 50% !important; box-shadow: rgb(166, 166, 166) 0px 0px 5px 1px !important; position: fixed !important; box-sizing: border-box !important; opacity: 0;"><div style="position: absolute; box-sizing: content-box; pointer-events: none; z-index: 2147483646; opacity: 0; top: 50vh; left: 50vw; width: 0px; height: 0px; margin: 0px; transition: 0.1s cubic-bezier(0, 1, 0.3, 1), opacity 0.1s ease-in; padding: 1px; translate: -1px -1px; outline: rgb(255, 120, 120) dashed 2px; box-shadow: white 0px 0px 0px 2px;"></div></html>
